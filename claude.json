@@ -1,0 +1,1048 @@
+{
+  "numStartups": 6,
+  "installMethod": "local",
+  "autoUpdates": true,
+  "hasSeenTasksHint": true,
+  "tipsHistory": {
+    "double-esc-code-restore": 2,
+    "custom-agents": 0,
+    "git-worktrees": 0,
+    "new-user-warmup": 6,
+    "terminal-setup": 2,
+    "shift-enter-setup": 2,
+    "memory-command": 2,
+    "theme-command": 2,
+    "status-line": 2,
+    "enter-to-steer-in-relatime": 2,
+    "todo-list": 2,
+    "# for memory": 2,
+    "install-github-app": 2,
+    "drag-and-drop-images": 2,
+    "paste-images-mac": 2,
+    "continue": 2,
+    "shift-tab": 2,
+    "image-paste": 2,
+    "tab-toggle-thinking": 2,
+    "ultrathink-keyword": 2,
+    "shift-enter": 6
+  },
+  "promptQueueUseCount": 9,
+  "cachedStatsigGates": {
+    "tengu_disable_bypass_permissions_mode": false,
+    "tengu_tool_pear": false
+  },
+  "cachedDynamicConfigs": {
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": ""
+    }
+  },
+  "userID": "ecbc5584119acdd8d9acc2d15337ae5ec6b4360364d98afe191dad88526ca049",
+  "fallbackAvailableWarningThreshold": 0.2,
+  "projects": {
+    "/Users/roberttaylor/Code/ChipFlow/Backend/chipflow-api": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "ok, please give me instructions for testing this",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, lets deploy and verify",
+          "pastedContents": {}
+        },
+        {
+          "display": "can you do this migration for both production, testing and PRs?",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, lets do it!",
+          "pastedContents": {}
+        },
+        {
+          "display": "are there any usage limitations with google secret manager? we'd be creating and deleting secrets for every build",
+          "pastedContents": {}
+        },
+        {
+          "display": "are we now using google secret manager for all secrets-at-rest ?",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "ignorePatterns": [],
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
+    },
+    "/Users/roberttaylor/Code/ChipFlow/configurator-devel/configurator": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "lets clean up any unused code before progressing with code review actions",
+          "pastedContents": {}
+        },
+        {
+          "display": "create a PR please",
+          "pastedContents": {}
+        },
+        {
+          "display": "continue",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets do this code clean up on a new branch",
+          "pastedContents": {}
+        },
+        {
+          "display": "No, if there is a processor, there must be one UART for bringup",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets do a full code review using code-reviewer agent",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets do a code review using code-reviewer agent",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets also start the user with a basic configuration of minerva, SRAM, QSPI flash, uart, platform timer. Also, rather than error when you add another cpu, lets swap it out. If there's a cpu, there should also always be a uart, for bringup.",
+          "pastedContents": {}
+        },
+        {
+          "display": "annoyingly the postCreateCommand runs when the user already has a terminal, this creates a race condition. Lets give this approach a try for running post-create.sh : https://code.visualstudio.com/remote/advancedcontainers/start-processes#_adding-startup-commands-to-the-docker-image-instead",
+          "pastedContents": {}
+        },
+        {
+          "display": "ah, we have a bunch of IPs that are actually connected to CSR that say WB, lets fix them all",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, lets check that CI passes",
+          "pastedContents": {}
+        },
+        {
+          "display": "Heres some initial user feedback:\n \" very weird, I created a basic SoC with minerva, SRAM, QSPI flash but the codespace doesn't create properly, I get a bunch of errors like this: 2025-10-17 08:15:13.921Z: cp: cannot create regular file '/home/user/.cache/uv/git-v0/db/64504795da67a85a/.git/objects/pack/pack-f328d8391fbdae00a773af3c2f3fdb32dfd80b3e.pack': Permission denied in creation.log\"\n -> we probably have a permissions issue when populating the uv cache\n\n \"also noticed a weird bug in the configurator itself, if you add a digital IP like UART or GPIO and then remove it, it isn't added back to the available IP list so you can't use it again, also it seems to ignore the number of bits you select for the GPIO, always using 32 in the padframe\"\n\n \"it should probably also stop you adding 2 CPU cores to the design\"\n\n \"final small nitpick but GPIO uses a CSR bus, not WB as is shown in the sidebar\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets also relase tag configurator",
+          "pastedContents": {}
+        },
+        {
+          "display": "confirm that CI is passing, then lets tag that as a release",
+          "pastedContents": {}
+        },
+        {
+          "display": "cool, lets also disable copilot in the codespace:\n```\n{\n  \"github.copilot.enable\": false,\n  \"github.copilot.inlineSuggest.enable\": false,\n  \"chat.commandCenter.enabled\": false\n}\n```\n\nand make the terminal font larger, its very small at the moment.\nWe can also disable the port forwarding.\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm, that pdm cache seems too small, whats in it?",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets also cache zig. I think what we'll need to do is maybe have a basic design in chipflow-template that we can run `chipflow pin lock; chipflow sim build` on. I guess lets keep that inside .devcontainer. The zig cache defaults to ~/.cache/zig and can be set by envvar ZIG_GLOBAL_CACHE_DIR",
+          "pastedContents": {}
+        },
+        {
+          "display": "is ci still passing?",
+          "pastedContents": {}
+        },
+        {
+          "display": "it went wrong",
+          "pastedContents": {}
+        },
+        {
+          "display": "test please!",
+          "pastedContents": {}
+        },
+        {
+          "display": "ahha. i found the issue. This machine is aarch64, we need to create a x86_64 container when testing",
+          "pastedContents": {}
+        },
+        {
+          "display": "argh. Please go back to where the wasmtime issue occurs, and let me debug it. I *do not* want the caching to happen in post-create",
+          "pastedContents": {}
+        },
+        {
+          "display": "i think you missed mkdir -p /opt/chipflow-cache/{pdm,yowasp}. The pdm config var is cache_dir, my bad!",
+          "pastedContents": {}
+        },
+        {
+          "display": "yeah go for it",
+          "pastedContents": {}
+        },
+        {
+          "display": "good catch. How about now?",
+          "pastedContents": {}
+        },
+        {
+          "display": "check out the changes i just made to chipflow-template. Do these look like they'll work?",
+          "pastedContents": {}
+        },
+        {
+          "display": "see /Users/roberttaylor/Code/ChipFlow/chipflow-lib/.venv/lib/python3.11/site-packages/yowasp_runtime/__init__.py for how yowasp initialisation works",
+          "pastedContents": {}
+        },
+        {
+          "display": "i think we can just run yowasp-yosys --version and that will populate the cache",
+          "pastedContents": {}
+        },
+        {
+          "display": "my local machine will be quite different to the docker/codespace environment",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm, it takes quite a long time initialising yowasp-yosys. Could you figure out if we can pre-cache this in the docker?",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "hasCompletedProjectOnboarding": true,
+      "lastTotalWebSearchRequests": 0,
+      "exampleFiles": [
+        "page.tsx",
+        "generate-and-deploy/route.ts",
+        "github-app.ts",
+        "codespace-generation.spec.ts",
+        "github/route.ts"
+      ],
+      "exampleFilesGeneratedAt": 1760710113426
+    },
+    "/Users/roberttaylor/Code/ChipFlow/chipflow-lib": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "lets go for option 3",
+          "pastedContents": {}
+        },
+        {
+          "display": "Is there a work around for the re-exported symbols issue?",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets check documentation builds, and check for documentation coverage of the public api",
+          "pastedContents": {}
+        },
+        {
+          "display": "we don't need the DriverSignature alias, please remove",
+          "pastedContents": {}
+        },
+        {
+          "display": "hang on, i'll set up chipflow-examples to use the local chipflow-digital-ip installed editable. Done now",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, so lets test chipflow-examples now.\nwhen i run pdm chipflow pin lock, i get the following error:\n[Pasted text #1 +24 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "minimal % pdm chipflow pin lock\nTraceback (most recent call last):\n  File \"/Users/roberttaylor/Code/ChipFlow/chipflow-lib/chipflow_lib/utils.py\", line 45, in get_cls_by_reference\n    module_obj = importlib.import_module(module_ref)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1206, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1178, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1142, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'chipflow_lib.steps.sim'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/Users/roberttaylor/Code/ChipFlow/chipflow-examples/.venv/bin/chipflow\", line 8, in <module>\n    sys.exit(run())\n             ^^^^^\n  File \"/Users/roberttaylor/Code/ChipFlow/chipflow-lib/chipflow_lib/cli.py\", line 44, in run\n    step_cls = _get_cls_by_reference(step_reference, context=f\"step `{step_name}`\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/roberttaylor/Code/ChipFlow/chipflow-lib/chipflow_lib/utils.py\", line 48, in get_cls_by_reference\n    raise ChipFlowError(\nchipflow_lib.utils.ChipFlowError: Module `chipflow_lib.steps.sim` was not found (referenced by step `sim` in [chipflow.top])"
+            }
+          }
+        },
+        {
+          "display": "ok, lets squash into the refactor commit",
+          "pastedContents": {}
+        },
+        {
+          "display": "use pdm",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, lets test chipflow-digital-ip building against this to test the compatability shims",
+          "pastedContents": {}
+        },
+        {
+          "display": "For the packaging module api, i think we'd need to work through a real world example of setting up for e.g. a custom package. Lets add that to the task list, but should be a seperate PR. For now lets make it private",
+          "pastedContents": {}
+        },
+        {
+          "display": "sorry, got the right branch now, please check again",
+          "pastedContents": {}
+        },
+        {
+          "display": "ugh, looks like the branch with picosoc on is old. I've fixed it up a bit now, can you check again",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm, no code should be using *PinSignature any more, so ignore that. Where did you find it?",
+          "pastedContents": {}
+        },
+        {
+          "display": "I've just updated chipflow-examples to include an example that uses more machinery - chipflow-examples/picosoc_verilog. can you analayse please?",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets compare against the symbols used by ../chipflow-digital-ip and ../chipflow-examples ",
+          "pastedContents": {}
+        },
+        {
+          "display": "yes. and  BasicCxxBuilder and SiliconTop shouldn't be public",
+          "pastedContents": {}
+        },
+        {
+          "display": "I can see some symbols that should be made private - can you list all the public symbols for me to go through?",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, next can you detail the public api? I want to make sure there's not too much surface",
+          "pastedContents": {}
+        },
+        {
+          "display": "do we need seperate KODING.md and CLAUDE.md files?",
+          "pastedContents": {}
+        },
+        {
+          "display": "actually, lets delete REFACTORING_PLAN.md REFACTORING_STATUS.md TEST_AUDIT.md TESTS_NOTES.md from the commits that added them/add to them, they shouldn't have been committed. If there's useful future guidance to claude in them, incorporate into CLAUDE.md",
+          "pastedContents": {}
+        },
+        {
+          "display": "please detail the additional documentation and code",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, there are way too many lines added. what is new over the removed code?",
+          "pastedContents": {}
+        },
+        {
+          "display": "why not refactor into one commit for each phase? check for which commits created stray files like '\\' and ']' and fix them at source",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, lets commit that and then clean up the PR patch set for best practices for a large change of this type",
+          "pastedContents": {}
+        },
+        {
+          "display": "I did it myself to be safe",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm, we seem to have a file called '\\' and a file called ']' ",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, lets commit and push",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "ignorePatterns": [],
+      "projectOnboardingSeenCount": 3,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "hasCompletedProjectOnboarding": true
+    },
+    "/Users/roberttaylor/Code/ChipFlow/AI/BMC": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "lets fix the diagrams that don't render",
+          "pastedContents": {}
+        },
+        {
+          "display": "create a project npm enviroment",
+          "pastedContents": {}
+        },
+        {
+          "display": "add scripts to generate SVG versions of teh diagrams",
+          "pastedContents": {}
+        },
+        {
+          "display": "please generate mermaid diagrams for the diagrams in the text above",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "ignorePatterns": [],
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": []
+    },
+    "/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "conan initiailisation give the error 'error: pathspec 'conan-toolchains' did not match any file(s) known to git' when i try it in a clean checkout",
+          "pastedContents": {}
+        },
+        {
+          "display": "oh also add to that script initialisation of conan",
+          "pastedContents": {}
+        },
+        {
+          "display": "ugh. ok, i think we need to ignore the ngspice codemodels for now. I'm goinbg to work on this on my own for a bit. In the meantime, can you create a script that iniialises EMSDK_DIR",
+          "pastedContents": {}
+        },
+        {
+          "display": "it should be using the cmpp we build before for the host architecture",
+          "pastedContents": {}
+        },
+        {
+          "display": "now these duplicates:\n[Pasted text #1 +59 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "wasm-ld: error: duplicate symbol: cm_climit_fcn\nwasm-ld: error: duplicate symbol: cm_smooth_corner\nwasm-ld: error: duplicate symbol: cm_smooth_discontinuity\nwasm-ld: error: duplicate symbol: cm_smooth_pwl\nwasm-ld: error: duplicate symbol: cm_analog_ramp_factor\nwasm-ld: error: duplicate symbol: cm_analog_alloc\nwasm-ld: error: duplicate symbol: cm_analog_get_ptr\nwasm-ld: error: duplicate symbol: cm_analog_integrate\nwasm-ld: error: duplicate symbol: cm_analog_converge\nwasm-ld: error: duplicate symbol: cm_analog_set_temp_bkpt\nwasm-ld: error: duplicate symbol: cm_analog_set_perm_bkpt\nwasm-ld: error: duplicate symbol: cm_analog_not_converged\nwasm-ld: error: duplicate symbol: cm_analog_auto_partial\nwasm-ld: error: duplicate symbol: cm_event_alloc\nwasm-ld: error: duplicate symbol: cm_event_get_ptr\nwasm-ld: error: duplicate symbol: cm_event_queue\nwasm-ld: error: duplicate symbol: cm_message_get_errmsg\nwasm-ld: error: duplicate symbol: cm_message_send\nwasm-ld: error: duplicate symbol: cm_netlist_get_c\nwasm-ld: error: duplicate symbol: cm_netlist_get_l\nwasm-ld: error: duplicate symbol: cm_climit_fcn\nwasm-ld: error: duplicate symbol: cm_smooth_corner\nwasm-ld: error: duplicate symbol: cm_smooth_discontinuity\nwasm-ld: error: duplicate symbol: cm_smooth_pwl\nwasm-ld: error: duplicate symbol: cm_analog_ramp_factor\nwasm-ld: error: duplicate symbol: cm_analog_alloc\nwasm-ld: error: duplicate symbol: cm_analog_get_ptr\nwasm-ld: error: duplicate symbol: cm_analog_integrate\nwasm-ld: error: duplicate symbol: cm_analog_converge\nwasm-ld: error: duplicate symbol: cm_analog_set_temp_bkpt\nwasm-ld: error: duplicate symbol: cm_analog_set_perm_bkpt\nwasm-ld: error: duplicate symbol: cm_analog_not_converged\nwasm-ld: error: duplicate symbol: cm_analog_auto_partial\nwasm-ld: error: duplicate symbol: cm_event_alloc\nwasm-ld: error: duplicate symbol: cm_event_get_ptr\nwasm-ld: error: duplicate symbol: cm_event_queue\nwasm-ld: error: duplicate symbol: cm_message_get_errmsg\nwasm-ld: error: duplicate symbol: cm_message_send\nwasm-ld: error: duplicate symbol: cm_netlist_get_c\nwasm-ld: error: duplicate symbol: cm_netlist_get_l\nwasm-ld: error: duplicate symbol: cm_climit_fcn\nwasm-ld: error: duplicate symbol: cm_smooth_corner\nwasm-ld: error: duplicate symbol: cm_smooth_discontinuity\nwasm-ld: error: duplicate symbol: cm_smooth_pwl\nwasm-ld: error: duplicate symbol: cm_analog_ramp_factor\nwasm-ld: error: duplicate symbol: cm_analog_alloc\nwasm-ld: error: duplicate symbol: cm_analog_get_ptr\nwasm-ld: error: duplicate symbol: cm_analog_integrate\nwasm-ld: error: duplicate symbol: cm_analog_converge\nwasm-ld: error: duplicate symbol: cm_analog_set_temp_bkpt\nwasm-ld: error: duplicate symbol: cm_analog_set_perm_bkpt\nwasm-ld: error: duplicate symbol: cm_analog_not_converged\nwasm-ld: error: duplicate symbol: cm_analog_auto_partial\nwasm-ld: error: duplicate symbol: cm_event_alloc\nwasm-ld: error: duplicate symbol: cm_event_get_ptr\nwasm-ld: error: duplicate symbol: cm_event_queue\nwasm-ld: error: duplicate symbol: cm_message_get_errmsg\nwasm-ld: error: duplicate symbol: cm_message_send\nwasm-ld: error: duplicate symbol: cm_netlist_get_c\nwasm-ld: error: duplicate symbol: cm_netlist_get_l"
+            }
+          }
+        },
+        {
+          "display": "ah, we have some dupicate symbols : \n\n[Pasted text #1 +59 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "wasm-ld: error: duplicate symbol: cmDEVices\nwasm-ld: error: duplicate symbol: cmDEVicesCNT\nwasm-ld: error: duplicate symbol: cmEVTudns\nwasm-ld: error: duplicate symbol: cmEVTudnCNT\nwasm-ld: error: duplicate symbol: coreitf\nwasm-ld: error: duplicate symbol: MIF_INP2A\nwasm-ld: error: duplicate symbol: MIFgetMod\nwasm-ld: error: duplicate symbol: MIFgetValue\nwasm-ld: error: duplicate symbol: MIFsetup\nwasm-ld: error: duplicate symbol: MIFunsetup\nwasm-ld: error: duplicate symbol: MIFload\nwasm-ld: error: duplicate symbol: MIFmParam\nwasm-ld: error: duplicate symbol: MIFask\nwasm-ld: error: duplicate symbol: MIFmAsk\nwasm-ld: error: duplicate symbol: MIFtrunc\nwasm-ld: error: duplicate symbol: MIFconvTest\nwasm-ld: error: duplicate symbol: MIFdelete\nwasm-ld: error: duplicate symbol: MIFmDelete\nwasm-ld: error: duplicate symbol: MIFdestroy\nwasm-ld: error: duplicate symbol: MIFgettok\nwasm-ld: error: duplicate symbol: cmDEVices\nwasm-ld: error: duplicate symbol: cmDEVicesCNT\nwasm-ld: error: duplicate symbol: cmEVTudns\nwasm-ld: error: duplicate symbol: cmEVTudnCNT\nwasm-ld: error: duplicate symbol: coreitf\nwasm-ld: error: duplicate symbol: MIF_INP2A\nwasm-ld: error: duplicate symbol: MIFgetMod\nwasm-ld: error: duplicate symbol: MIFgetValue\nwasm-ld: error: duplicate symbol: MIFsetup\nwasm-ld: error: duplicate symbol: MIFunsetup\nwasm-ld: error: duplicate symbol: MIFload\nwasm-ld: error: duplicate symbol: MIFmParam\nwasm-ld: error: duplicate symbol: MIFask\nwasm-ld: error: duplicate symbol: MIFmAsk\nwasm-ld: error: duplicate symbol: MIFtrunc\nwasm-ld: error: duplicate symbol: MIFconvTest\nwasm-ld: error: duplicate symbol: MIFdelete\nwasm-ld: error: duplicate symbol: MIFmDelete\nwasm-ld: error: duplicate symbol: MIFdestroy\nwasm-ld: error: duplicate symbol: MIFgettok\nwasm-ld: error: duplicate symbol: cmDEVices\nwasm-ld: error: duplicate symbol: cmDEVicesCNT\nwasm-ld: error: duplicate symbol: cmEVTudns\nwasm-ld: error: duplicate symbol: cmEVTudnCNT\nwasm-ld: error: duplicate symbol: coreitf\nwasm-ld: error: duplicate symbol: MIF_INP2A\nwasm-ld: error: duplicate symbol: MIFgetMod\nwasm-ld: error: duplicate symbol: MIFgetValue\nwasm-ld: error: duplicate symbol: MIFsetup\nwasm-ld: error: duplicate symbol: MIFunsetup\nwasm-ld: error: duplicate symbol: MIFload\nwasm-ld: error: duplicate symbol: MIFmParam\nwasm-ld: error: duplicate symbol: MIFask\nwasm-ld: error: duplicate symbol: MIFmAsk\nwasm-ld: error: duplicate symbol: MIFtrunc\nwasm-ld: error: duplicate symbol: MIFconvTest\nwasm-ld: error: duplicate symbol: MIFdelete\nwasm-ld: error: duplicate symbol: MIFmDelete\nwasm-ld: error: duplicate symbol: MIFdestroy\nwasm-ld: error: duplicate symbol: MIFgettok"
+            }
+          }
+        },
+        {
+          "display": "i think qucs is still trying to link to the old library, you'll need to pass NGSPICE_LIBARAY to override",
+          "pastedContents": {}
+        },
+        {
+          "display": "integrate!",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm, yes, you're right, the GNUMakefile.in are still used. that sucks! Ok, i think the best approach is to not modify ngspice at all, but have a stage after building ngspice that assembles a new libspice-combined.a",
+          "pastedContents": {}
+        },
+        {
+          "display": "i don't think the GNUmakefile is used at all, just focus on Makefile.am files",
+          "pastedContents": {}
+        },
+        {
+          "display": "for 1) i don't think refactoring is necessary, there's already the *_la_SOURCES - try a grep and see",
+          "pastedContents": {}
+        },
+        {
+          "display": "yes please, but create a branch with your current approach so we dont lose it",
+          "pastedContents": {}
+        },
+        {
+          "display": "when i run build-wasm.sh I get the same undefined symbol errors again",
+          "pastedContents": {}
+        },
+        {
+          "display": "status?",
+          "pastedContents": {}
+        },
+        {
+          "display": "correct me if i'm wrong, but won't makefile implicit rules work for cmpp processing?",
+          "pastedContents": {}
+        },
+        {
+          "display": "oh, i see. Have you considered (optionally) including the automake files at top level and adding *la__SOURCES to the top level libngspice_la_SOURCES?",
+          "pastedContents": {}
+        },
+        {
+          "display": "hold on, why are you getting rid of the .a files?",
+          "pastedContents": {}
+        },
+        {
+          "display": "you'll have to use emscripten's ar/objdump",
+          "pastedContents": {}
+        },
+        {
+          "display": "running build-wasm.sh, i get link errors:\n```\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/lib/libngspice.a(static_codemodels.o): undefined symbol: CMdevNum_spice2poly\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/lib/libngspice.a(static_codemodels.o): undefined symbol: CMdevs_spice2poly\n...",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm , build-wasm.sh is failing now",
+          "pastedContents": {}
+        },
+        {
+          "display": "error:\n```\nMaking all in misc\n/bin/sh ../../libtool  --tag=CC   --mode=compile /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/emsdk/upstream/emscripten/emcc -DHAVE_CONFIG_H   -I. -I../../../src/misc -I../../src/include -I../../../src/include  -shared -O2 -pthread -DEMSCRIPTEN -fvisibility=hidden -std=gnu11 -MT getopt_long_bsd.lo -MD -MP -MF .deps/getopt_long_bsd.Tpo -c -o getopt_long_bsd.lo ../../../src/misc/getopt_long_bsd.c\nlibtool:   error: cannot build a shared library See the libtool documentation for more information. Fatal configuration error.\nmake[2]: *** [getopt_long_bsd.lo] Error 1\n```",
+          "pastedContents": {}
+        },
+        {
+          "display": "continue, but also make the changes in such a way they don't break standard shared library build and can be upstreamed",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, lets look at ngspice and figure out what we need to change to build libngspice as a static library, with the loadable modules built in and module loading disabled (e.g spice2poly, analog, tlines etc)",
+          "pastedContents": {}
+        },
+        {
+          "display": "ah, clean does not clean qt-build-wasm-svg",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets mod the script to echo the configure and build commands ",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets mod the --reconfigure option for build-wasm to be able to take which component to reconfigure (e.g --reconfigurw=qucs)",
+          "pastedContents": {}
+        },
+        {
+          "display": "oh no, that won't work",
+          "pastedContents": {}
+        },
+        {
+          "display": "oh",
+          "pastedContents": {}
+        },
+        {
+          "display": "Rebuild ngspice without --with-ngshared",
+          "pastedContents": {}
+        },
+        {
+          "display": "continue",
+          "pastedContents": {}
+        },
+        {
+          "display": "yep, lets continue with those steps",
+          "pastedContents": {}
+        },
+        {
+          "display": "oh! we got to somethinvg running \\o/ .\n\nWe got a qt error box \"No simulators found automatically\", so maybe there's an issue with NGSPICE_SHARED and probably the changes the WITH_EXTERNAL_DESIGN_TOOLS config option",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm, wasm-opt is now taking forever! lets build -O0 for now",
+          "pastedContents": {}
+        },
+        {
+          "display": "we also had this:\n```\n(index):190  [Qucs-S] Load error: RuntimeError: Aborted(). Build with -sASSERTIONS for more info.\n    at abort (qucs-s.js:1:6334)\n    at __abort_js (qucs-s.js:1:77395)\n    at qucs-s.wasm:0xa3887\n    at qucs-s.wasm:0x2e737\n    at qucs-s.wasm:0xca2080\n    at invoke_viii (qucs-s.js:1:228885)\n    at qucs-s.wasm:0x15989\n    at qucs-s.wasm:0xc1c318\n    at invoke_iii (qucs-s.js:1:229810)\n    at qucs-s.wasm:0x19c07d\n```\nso lets add -sASSERTIONS",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, thats got us further on. We get now get a fatal error in main:\n```\nFatal: Calling exec() is not supported on Qt for WebAssembly in this configuration. Please build with asyncify support, or use an asynchronous API like QDialog::open() (:0, )",
+          "pastedContents": {}
+        },
+        {
+          "display": "build is complete",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm, this appears to be related to dynamic linking (https://github.com/emscripten-core/emscripten/issues/14405). lets start by making this all link statically.",
+          "pastedContents": {}
+        },
+        {
+          "display": "```\n[Pasted text #1 +225 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "(index):136 [Qucs-S] Cross-origin isolation is ENABLED - SharedArrayBuffer available\n(index):149 [Qucs-S] SharedArrayBuffer is available\nfavicon.ico:1   GET http://localhost:8000/favicon.ico 404 (File not found)\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at receiveInstantiationResult (qucs-s.js:1:8638)\n    at createWasm (qucs-s.js:1:9118)\n    at async Object.entryFunction (qucs-s.js:1:295410)\n    at async qtLoad (qtloader.js:231:20)\n    at async init ((index):169:34)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\nreceiveInstantiationResult @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nawait in createWasm\n(anonymous) @ qucs-s.js:1\nqtLoad @ qtloader.js:232\nawait in qtLoad\ninit @ (index):169\nonload @ (index):108\n[NEW] Explain Console errors by using Copilot in Edge: click\n         \n         to explain an error. \n        Learn more\n        Don't show again\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  Uncaught (in promise) BindingError: parameter 0 has unknown type b\n    at throwBindingError (qucs-s.js:1:97107)\n    at requireRegisteredType (qucs-s.js:1:121407)\n    at emval_lookupTypes (qucs-s.js:1:121598)\n    at __emval_create_invoker (qucs-s.js:1:122220)\n    at qucs-s.wasm:0xc85f62\n    at invoke_iiii (qucs-s.js:1:282676)\n    at qucs-s.wasm:0xc860f4\n    at qucs-s.wasm:0xc8abbf\n    at invoke_iii (qucs-s.js:1:283438)\n    at qucs-s.wasm:0xc8ac81\nthrowBindingError @ qucs-s.js:1\nrequireRegisteredType @ qucs-s.js:1\nemval_lookupTypes @ qucs-s.js:1\n__emval_create_invoker @ qucs-s.js:1\n$func15980 @ qucs-s.wasm:0xc85f62\ninvoke_iiii @ qucs-s.js:1\n$func15981 @ qucs-s.wasm:0xc860f4\n$func16038 @ qucs-s.wasm:0xc8abbf\ninvoke_iii @ qucs-s.js:1\n$func16039 @ qucs-s.wasm:0xc8ac81\ninvoke_ii @ qucs-s.js:1\n$func8884 @ qucs-s.wasm:0x77c871\n$func1726 @ qucs-s.wasm:0xcbab9\n$func508 @ qucs-s.wasm:0x3aed8\n$__wasm_call_ctors @ qucs-s.wasm:0x10ac7f3\ninitRuntime @ qucs-s.js:1\ndoRun @ qucs-s.js:1\nrun @ qucs-s.js:1\nremoveRunDependency @ qucs-s.js:1\n(anonymous) @ qucs-s.js:1\nawait in (anonymous)\ncallRuntimeCallbacks @ qucs-s.js:1\npreRun @ qucs-s.js:1\nrun @ qucs-s.js:1\n(anonymous) @ qucs-s.js:1\nawait in (anonymous)\nqtLoad @ qtloader.js:232\nawait in qtLoad\ninit @ (index):169\nonload @ (index):108\n"
+            }
+          }
+        },
+        {
+          "display": "same, i think:\n```\n[Pasted text #1 +274 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "(index):136 [Qucs-S] Cross-origin isolation is ENABLED - SharedArrayBuffer available\n(index):149 [Qucs-S] SharedArrayBuffer is available\nfavicon.ico:1   GET http://localhost:8000/favicon.ico 404 (File not found)\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at receiveInstantiationResult (qucs-s.js:1:8638)\n    at createWasm (qucs-s.js:1:9118)\n    at async Object.entryFunction (qucs-s.js:1:295410)\n    at async qtLoad (qtloader.js:231:20)\n    at async init ((index):169:34)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\nreceiveInstantiationResult @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nawait in createWasm\n(anonymous) @ qucs-s.js:1\nqtLoad @ qtloader.js:232\nawait in qtLoad\ninit @ (index):169\nonload @ (index):108\n[NEW] Explain Console errors by using Copilot in Edge: click\n         \n         to explain an error. \n        Learn more\n        Don't show again\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  QGuiApplication::font(): no QGuiApplication instance and no application font set.\n\n__emscripten_log_formatted @ qucs-s.js:1\n$func17066 @ qucs-s.wasm:0xcfbf2e\ninvoke_viii @ qucs-s.js:1\n$func16698 @ qucs-s.wasm:0xcdbb4d\ninvoke_vii @ qucs-s.js:1\n$func16678 @ qucs-s.wasm:0xcd9794\ninvoke_viii @ qucs-s.js:1\n$func9158 @ qucs-s.wasm:0x7c8af7\ninvoke_viii @ qucs-s.js:1\n$func4039 @ qucs-s.wasm:0x2264d5\n$func216 @ qucs-s.wasm:0x1eab6\n$func1414 @ qucs-s.wasm:0xa2431\n$func508 @ qucs-s.wasm:0x3b591\n$__wasm_call_ctors @ qucs-s.wasm:0x10ac82e\ninitRuntime @ qucs-s.js:1\ndoRun @ qucs-s.js:1\nrun @ qucs-s.js:1\nremoveRunDependency @ qucs-s.js:1\n(anonymous) @ qucs-s.js:1\nawait in (anonymous)\ncallRuntimeCallbacks @ qucs-s.js:1\npreRun @ qucs-s.js:1\nrun @ qucs-s.js:1\n(anonymous) @ qucs-s.js:1\nawait in (anonymous)\nqtLoad @ qtloader.js:232\nawait in qtLoad\ninit @ (index):169\nonload @ (index):108\nqucs-s.js:1  QGuiApplication::font(): no QGuiApplication instance and no application font set.\n\n__emscripten_log_formatted @ qucs-s.js:1\n$func17066 @ qucs-s.wasm:0xcfbf2e\ninvoke_viii @ qucs-s.js:1\n$func16698 @ qucs-s.wasm:0xcdbb4d\ninvoke_vii @ qucs-s.js:1\n$func16678 @ qucs-s.wasm:0xcd9794\ninvoke_viii @ qucs-s.js:1\n$func9158 @ qucs-s.wasm:0x7c8af7\ninvoke_viii @ qucs-s.js:1\n$func4039 @ qucs-s.wasm:0x2264d5\n$func216 @ qucs-s.wasm:0x1eab6\n$func1414 @ qucs-s.wasm:0xa2431\n$func508 @ qucs-s.wasm:0x3b6fa\n$__wasm_call_ctors @ qucs-s.wasm:0x10ac82e\ninitRuntime @ qucs-s.js:1\ndoRun @ qucs-s.js:1\nrun @ qucs-s.js:1\nremoveRunDependency @ qucs-s.js:1\n(anonymous) @ qucs-s.js:1\nawait in (anonymous)\ncallRuntimeCallbacks @ qucs-s.js:1\npreRun @ qucs-s.js:1\nrun @ qucs-s.js:1\n(anonymous) @ qucs-s.js:1\nawait in (anonymous)\nqtLoad @ qtloader.js:232\nawait in qtLoad\ninit @ (index):169\nonload @ (index):108\n(index):190  [Qucs-S] Load error: TypeError: getWasmTableEntry(...) is not a function\n    at invoke_i (qucs-s.js:1:284239)\n    at qucs-s.wasm:0x1bd361\n    at invoke_i (qucs-s.js:1:284239)\n    at qucs-s.wasm:0x760fac\n    at qucs-s.wasm:0x878987\n    at qucs-s.wasm:0xdd6de4\n    at qucs-s.wasm:0xa314c7\n    at qucs-s.wasm:0x362020\n    at qucs-s.wasm:0x533cae\n    at qucs-s.wasm:0xffd073\ninit @ (index):190\nawait in init\nonload @ (index):108\n(index):191  TypeError: getWasmTableEntry(...) is not a function\n    at invoke_i (qucs-s.js:1:284239)\n    at qucs-s.wasm:0x1bd361\n    at invoke_i (qucs-s.js:1:284239)\n    at qucs-s.wasm:0x760fac\n    at qucs-s.wasm:0x878987\n    at qucs-s.wasm:0xdd6de4\n    at qucs-s.wasm:0xa314c7\n    at qucs-s.wasm:0x362020\n    at qucs-s.wasm:0x533cae\n    at qucs-s.wasm:0xffd073\ninit @ (index):191\nawait in init\nonload @ (index):108\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\n"
+            }
+          }
+        },
+        {
+          "display": "```\n[Pasted text #1 +225 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "(index):136 [Qucs-S] Cross-origin isolation is ENABLED - SharedArrayBuffer available\n(index):149 [Qucs-S] SharedArrayBuffer is available\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at receiveInstantiationResult (qucs-s.js:1:8638)\n    at createWasm (qucs-s.js:1:9118)\n    at async Object.entryFunction (qucs-s.js:1:295410)\n    at async qtLoad (qtloader.js:231:20)\n    at async init ((index):169:34)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\nreceiveInstantiationResult @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nawait in createWasm\n(anonymous) @ qucs-s.js:1\nqtLoad @ qtloader.js:232\nawait in qtLoad\ninit @ (index):169\nonload @ (index):108\nfavicon.ico:1   GET http://localhost:8000/favicon.ico 404 (File not found)\n[NEW] Explain Console errors by using Copilot in Edge: click\n         \n         to explain an error. \n        Learn more\n        Don't show again\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  worker sent an error! http://localhost:8000/qucs-s.js:1: Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: 'Uncaught [object ErrorEvent]', filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 14496, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\nworker.onerror @ qucs-s.js:1\n(index):200  [Qucs-S] Global error: ErrorEvent {isTrusted: true, message: \"Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\", filename: 'http://localhost:8000/qucs-s.js', lineno: 1, colno: 21075, …}\n(anonymous) @ (index):200\nqucs-s.js:1  Uncaught TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at createWasm (qucs-s.js:1:8969)\n    at handleMessage (qucs-s.js:1:4245)\nconvertJsFunctionToWasm @ qucs-s.js:1\naddFunction @ qucs-s.js:1\nreportUndefinedSymbols @ qucs-s.js:1\nloadDylibs @ qucs-s.js:1\nreceiveInstance @ qucs-s.js:1\ncreateWasm @ qucs-s.js:1\nhandleMessage @ qucs-s.js:1\nqucs-s.js:1  Uncaught (in promise) BindingError: parameter 0 has unknown type b\n    at throwBindingError (qucs-s.js:1:97107)\n    at requireRegisteredType (qucs-s.js:1:121407)\n    at emval_lookupTypes (qucs-s.js:1:121598)\n    at __emval_create_invoker (qucs-s.js:1:122220)\n    at qucs-s.wasm:0xc85f62\n    at invoke_iiii (qucs-s.js:1:282676)\n    at qucs-s.wasm:0xc860f4\n    at qucs-s.wasm:0xc8abbf\n    at invoke_iii (qucs-s.js:1:283438)\n    at qucs-s.wasm:0xc8ac81\nthrowBindingError @ qucs-s.js:1\nrequireRegisteredType @ qucs-s.js:1\nemval_lookupTypes @ qucs-s.js:1\n__emval_create_invoker @ qucs-s.js:1\n$func15980 @ qucs-s.wasm:0xc85f62\ninvoke_iiii @ qucs-s.js:1\n$func15981 @ qucs-s.wasm:0xc860f4\n$func16038 @ qucs-s.wasm:0xc8abbf\ninvoke_iii @ qucs-s.js:1\n$func16039 @ qucs-s.wasm:0xc8ac81\ninvoke_ii @ qucs-s.js:1\n$func8884 @ qucs-s.wasm:0x77c871\n$func1726 @ qucs-s.wasm:0xcbab9\n$func508 @ qucs-s.wasm:0x3aed8\n$__wasm_call_ctors @ qucs-s.wasm:0x10ac7f3\ninitRuntime @ qucs-s.js:1\ndoRun @ qucs-s.js:1\nrun @ qucs-s.js:1\nremoveRunDependency @ qucs-s.js:1\n(anonymous) @ qucs-s.js:1\nawait in (anonymous)\ncallRuntimeCallbacks @ qucs-s.js:1\npreRun @ qucs-s.js:1\nrun @ qucs-s.js:1\n(anonymous) @ qucs-s.js:1\nawait in (anonymous)\nqtLoad @ qtloader.js:232\nawait in qtLoad\ninit @ (index):169\nonload @ (index):108\n"
+            }
+          }
+        },
+        {
+          "display": "hmm, there are no notable messages.  i see it load qucs-s.js, but it doesnt fetch any wasm files.",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, we are past the embind issue now. Now we see 'Loading...\", and nothing more.\n\nthe console has these errors:\n```\n[Pasted text #1 +25 lines]\n```\n\nMaybe related are these warnings:\n```\nem++: warning: -sMAIN_MODULE + pthreads is experimental [-Wexperimental]\nem++: warning: -pthread + ALLOW_MEMORY_GROWTH may run non-wasm code slowly, see https://github.com/WebAssembly/design/issues/1271 [-Wpthreads-mem-growth]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "\n﻿\nqucs-s.js:1 \n Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'slice')\n    at convertJsFunctionToWasm (qucs-s.js:1:21075)\n    at addFunction (qucs-s.js:1:22131)\n    at reportUndefinedSymbols (qucs-s.js:1:75217)\n    at loadDylibs (qucs-s.js:1:75428)\n    at receiveInstance (qucs-s.js:1:8314)\n    at receiveInstantiationResult (qucs-s.js:1:8638)\n    at createWasm (qucs-s.js:1:9118)\n    at async Object.entryFunction (qucs-s.js:1:295410)\n    at async qtLoad (qtloader.js:231:20)\n    at async init (qucs-s.html:53:34)\nqucs-s.js:1 \n Uncaught (in promise) DataCloneError: Failed to execute 'postMessage' on 'Worker': SharedArrayBuffer transfer requires self.crossOriginIsolated.\n    at qucs-s.js:1:14801\n    at new Promise (<anonymous>)\n    at loadWasmModuleToWorker (qucs-s.js:1:13420)\n    at Array.map (<anonymous>)\n    at Object.loadWasmModuleToAllWorkers (qucs-s.js:1:15015)\n    at qucs-s.js:1:12638\n    at callRuntimeCallbacks (qucs-s.js:1:9958)\n    at preRun (qucs-s.js:1:5819)\n    at run (qucs-s.js:1:294912)\n    at Object.entryFunction (qucs-s.js:1:295431)"
+            }
+          }
+        },
+        {
+          "display": "oh, something odd is happening in emscripten:\n```\n[Pasted text #1 +19 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "Aborted(Assertion failed: Missing signature argument to addFunction: function jsHaveJspi() { return typeof Asyncify !== \"undefined\" && !!Asyncify.makeAsyncFunction && (!!WebAssembly.Function || !!WebAssembly.Suspending); })\n/private/var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_temp_w2yyz99o/tsgen.js:884\n  var e = new WebAssembly.RuntimeError(what);\n          ^\n\nRuntimeError: Aborted(Assertion failed: Missing signature argument to addFunction: function jsHaveJspi() { return typeof Asyncify !== \"undefined\" && !!Asyncify.makeAsyncFunction && (!!WebAssembly.Function || !!WebAssembly.Suspending); })\n    at abort (/private/var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_temp_w2yyz99o/tsgen.js:884:11)\n    at assert (/private/var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_temp_w2yyz99o/tsgen.js:284:5)\n    at addFunction (/private/var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_temp_w2yyz99o/tsgen.js:1995:9)\n    at reportUndefinedSymbols (/private/var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_temp_w2yyz99o/tsgen.js:5277:27)\n    at loadDylibs (/private/var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_temp_w2yyz99o/tsgen.js:5290:9)\n    at receiveInstance (/private/var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_temp_w2yyz99o/tsgen.js:1007:5)\n    at receiveInstantiationResult (/private/var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_temp_w2yyz99o/tsgen.js:1035:12)\n    at createWasm (/private/var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_temp_w2yyz99o/tsgen.js:1069:17)\n\nNode.js v22.16.0\nem++: error: '/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/emsdk/node/22.16.0_64bit/bin/node /var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_temp_w2yyz99o/tsgen.js /var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_temp_w2yyz99o/embind_generated_output.js' failed (returned 1)\nmake[2]: *** [qucs-s-spar-viewer/qucs-sspar-viewer.js] Error 1\nmake[1]: *** [qucs-s-spar-viewer/CMakeFiles/qucs-sspar-viewer.dir/all] Error 2\n[ 26%] Building CXX object qucs/components/CMakeFiles/components.dir/potentiometer.cpp.o"
+            }
+          }
+        },
+        {
+          "display": "ah, it failed to find qsvg\n```\n[Pasted text #1 +23 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "-- Could NOT find Qt6Svg (missing: Qt6Svg_DIR)\nCMake Error at qucs/CMakeLists.txt:62 (find_package):\n  Found package configuration file:\n\n    /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/cmake/Qt6/Qt6Config.cmake\n\n  but it set Qt6_FOUND to FALSE so package \"Qt6\" is considered to be NOT\n  FOUND.  Reason given by package:\n\n  Failed to find required Qt component \"Svg\".\n\n  Expected Config file at\n  \"/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/cmake/Qt6Svg/Qt6SvgConfig.cmake\"\n  does NOT exist\n\n\n\n  Configuring with --debug-find-pkg=Qt6Svg might reveal details why the\n  package was not found.\n\n  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some\n  of the path variables that find_package uses to try and find the package.\n\n"
+            }
+          }
+        },
+        {
+          "display": "hmm, our check for whether cmake configuration has happened fails when configuration failed:\n```\nStep 4: Building Qucs-S with ngspice shared library...\nUsing existing Qucs-S build directory\nUsing Qt toolchain: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/cmake/Qt6/qt.toolchain.cmake\nUsing Qt prefix path: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt\nQucs-S already configured, skipping configure step\nBuilding Qucs-S...\nmake: make -j14\nmake: *** No targets specified and no makefile found.  Stop.\n```",
+          "pastedContents": {}
+        },
+        {
+          "display": "same issue is occuring for qucs:\n```\nCMake Error at CMakeLists.txt:42 (find_package):\n  Found package configuration file:\n\n    /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/cmake/Qt6/Qt6Config.cmake\n\n  but it set Qt6_FOUND to FALSE so package \"Qt6\" is considered to be NOT\n  FOUND.  Reason given by package:\n\n  Failed to find required Qt component \"Core\".\n\n  Expected Config file at\n  \"/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/cmake/Qt6Core/Qt6CoreConfig.cmake\"\n  exists\n\n\n\n  Configuring with --debug-find-pkg=Qt6Core might reveal details why the\n  package was not found.\n\n  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some\n  of the path variables that find_package uses to try and find the package.\n```",
+          "pastedContents": {}
+        },
+        {
+          "display": "qsvg build fails.\n```\nCMake Error at CMakeLists.txt:20 (find_package):\n  Found package configuration file:\n\n    /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/cmake/Qt6/Qt6Config.cmake\n\n  but it set Qt6_FOUND to FALSE so package \"Qt6\" is considered to be NOT\n  FOUND.  Reason given by package:\n\n  Failed to find required Qt component \"Core\".\n\n  Expected Config file at\n  \"/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/cmake/Qt6Core/Qt6CoreConfig.cmake\"\n  exists\n\n\n\n  Configuring with --debug-find-pkg=Qt6Core might reveal details why the\n  package was not found.\n\n  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some\n  of the path variables that find_package uses to try and find the package.\n\n```\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "ah, qucs build needs updating to find the qt build",
+          "pastedContents": {}
+        },
+        {
+          "display": "is it still building?",
+          "pastedContents": {}
+        },
+        {
+          "display": "agh. ok, so the recent wasm fixes for qt seem to not be in qt 6.10. I think we'll have to build qt from git. Lets start with the dev branch of qt/qtbase on github. ",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets make the reconfigure flag also reconfigure qt and qucs-s for sanity :)",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets tweak the script so it also doesn't reconfigure nspice if already configured.",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, that got further, but:\n```\n[Pasted text #1 +25 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "wasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qbytearray.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_get_global\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_new_cstring\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_get_property\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_new_cstring\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_get_property\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_create_invoker\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_incref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_invoke\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_run_destructors\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_create_invoker\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_invoke\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/install-wasm/qt/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_run_destructors\nwasm-ld: error: too many errors emitted, stopping now (use -error-limit=0 to see all errors)\nem++: error: '/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/emsdk/upstream/bin/wasm-ld @/var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_zgspokn8.rsp.utf-8' failed (returned 1)\nmake[2]: *** [qucs-s-spar-viewer/qucs-sspar-viewer.js] Error 1\nmake[1]: *** [qucs-s-spar-viewer/CMakeFiles/qucs-sspar-viewer.dir/all] Error 2\nmake: *** [all] Error 2\nemmake: error: 'make -j14' failed (returned 2)"
+            }
+          }
+        },
+        {
+          "display": "lets switch to v6.10.0 as there appear to have been a bunch of wasm fixes",
+          "pastedContents": {}
+        },
+        {
+          "display": "if we're not building clean, lets skip configuring qt again.",
+          "pastedContents": {}
+        },
+        {
+          "display": "the patch needs fixing to include <QtGui/qevent.h> rather than <QtCore/qevent.h>",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm, same error. I guess qwasmsocket.h is missing #include <QtGlobal>",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets disable -Wcharacter-conversion as it makes the build quite noisy",
+          "pastedContents": {}
+        },
+        {
+          "display": "i think we need feature-thread",
+          "pastedContents": {}
+        },
+        {
+          "display": "we hit build errors:\n```\n[Pasted text #1 +45 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/platform/wasm/qwasmsocket.cpp:38:9: error: use of undeclared identifier 'QCoreApplication'\n   38 |         QCoreApplication::postEvent(notifier, new QEvent(QEvent::SockAct));\n      |         ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/platform/wasm/qwasmsocket.cpp:38:58: error: incomplete type 'QEvent' named in nested name specifier\n   38 |         QCoreApplication::postEvent(notifier, new QEvent(QEvent::SockAct));\n      |                                                          ^~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:30:7: note: forward declaration of 'QEvent'\n   30 | class QEvent;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/platform/wasm/qwasmsocket.cpp:111:13: error: use of undeclared identifier 'QCoreApplication'\n  111 |             QCoreApplication::postEvent(notifier, new QEvent(QEvent::SockAct));\n      |             ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/platform/wasm/qwasmsocket.cpp:111:62: error: incomplete type 'QEvent' named in nested name specifier\n  111 |             QCoreApplication::postEvent(notifier, new QEvent(QEvent::SockAct));\n      |                                                              ^~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:30:7: note: forward declaration of 'QEvent'\n   30 | class QEvent;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/platform/wasm/qwasmsocket.cpp:126:17: error: use of undeclared identifier 'QCoreApplication'\n  126 |                 QCoreApplication::postEvent(notifier, new QEvent(QEvent::SockAct));\n      |                 ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/platform/wasm/qwasmsocket.cpp:126:66: error: incomplete type 'QEvent' named in nested name specifier\n  126 |                 QCoreApplication::postEvent(notifier, new QEvent(QEvent::SockAct));\n      |                                                                  ^~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:30:7: note: forward declaration of 'QEvent'\n   30 | class QEvent;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/platform/wasm/qwasmsocket.cpp:154:17: error: use of undeclared identifier 'QCoreApplication'\n  154 |                 QCoreApplication::postEvent(notifier, new QEvent(QEvent::SockAct));\n      |                 ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/platform/wasm/qwasmsocket.cpp:154:66: error: incomplete type 'QEvent' named in nested name specifier\n  154 |                 QCoreApplication::postEvent(notifier, new QEvent(QEvent::SockAct));\n      |                                                                  ^~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:30:7: note: forward declaration of 'QEvent'\n   30 | class QEvent;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/platform/wasm/qwasmsocket.cpp:174:13: error: use of undeclared identifier 'QCoreApplication'\n  174 |             QCoreApplication::postEvent(notifier, new QEvent(QEvent::SockClose));\n      |             ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/platform/wasm/qwasmsocket.cpp:174:62: error: incomplete type 'QEvent' named in nested name specifier\n  174 |             QCoreApplication::postEvent(notifier, new QEvent(QEvent::SockClose));\n      |                                                              ^~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:30:7: note: forward declaration of 'QEvent'\n   30 | class QEvent;\n      |       ^\n30 warnings and 10 errors generated."
+            }
+          }
+        },
+        {
+          "display": "hmm, can we do an out of tree build of Qt to make cleaning easier? also we better add to the script to download the qt source (version 6.9.2) and extract it at startup.",
+          "pastedContents": {}
+        },
+        {
+          "display": "errors:\n```\n[Pasted text #1 +98 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "\nCMake Error: File /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/bin/qmake-and-qtpaths-wrapper.in does not exist.\nCMake Error at cmake/QtQmakeHelpers.cmake:193 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  cmake/QtBaseGlobalTargets.cmake:129 (qt_generate_qmake_and_qtpaths_wrapper_for_target)\n  cmake/QtBaseHelpers.cmake:193 (include)\n  CMakeLists.txt:36 (qt_internal_qtbase_build_repo)\n\n\nCMake Error: File /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/bin/qmake-and-qtpaths-wrapper.in does not exist.\nCMake Error at cmake/QtQmakeHelpers.cmake:193 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  cmake/QtBaseGlobalTargets.cmake:129 (qt_generate_qmake_and_qtpaths_wrapper_for_target)\n  cmake/QtBaseHelpers.cmake:193 (include)\n  CMakeLists.txt:36 (qt_internal_qtbase_build_repo)\n\n\nCMake Error: File /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/bin/qt-cmake.in does not exist.\nCMake Error at cmake/QtWrapperScriptHelpers.cmake:33 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  cmake/QtBaseGlobalTargets.cmake:132 (qt_internal_create_wrapper_scripts)\n  cmake/QtBaseHelpers.cmake:193 (include)\n  CMakeLists.txt:36 (qt_internal_qtbase_build_repo)\n\n\nCMake Error: File /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/bin/qt-cmake-create.in does not exist.\nCMake Error at cmake/QtWrapperScriptHelpers.cmake:48 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  cmake/QtBaseGlobalTargets.cmake:132 (qt_internal_create_wrapper_scripts)\n  cmake/QtBaseHelpers.cmake:193 (include)\n  CMakeLists.txt:36 (qt_internal_qtbase_build_repo)\n\n\nCMake Error: File /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/bin/qt-cmake.in does not exist.\nCMake Error at cmake/QtWrapperScriptHelpers.cmake:76 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  cmake/QtBaseGlobalTargets.cmake:132 (qt_internal_create_wrapper_scripts)\n  cmake/QtBaseHelpers.cmake:193 (include)\n  CMakeLists.txt:36 (qt_internal_qtbase_build_repo)\n\n\nCMake Error: File /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/bin/qt-configure-module.in does not exist.\nCMake Error at cmake/QtWrapperScriptHelpers.cmake:102 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  cmake/QtBaseGlobalTargets.cmake:132 (qt_internal_create_wrapper_scripts)\n  cmake/QtBaseHelpers.cmake:193 (include)\n  CMakeLists.txt:36 (qt_internal_qtbase_build_repo)\n\n\nCMake Error: File /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/bin/qt-cmake-standalone-test.in does not exist.\nCMake Error at cmake/QtWrapperScriptHelpers.cmake:176 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  cmake/QtBaseGlobalTargets.cmake:132 (qt_internal_create_wrapper_scripts)\n  cmake/QtBaseHelpers.cmake:193 (include)\n  CMakeLists.txt:36 (qt_internal_qtbase_build_repo)\n\n\nCMake Error: File /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/bin/qt-cmake-private-install.cmake.in does not exist.\nCMake Error at cmake/QtWrapperScriptHelpers.cmake:231 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  cmake/QtBaseGlobalTargets.cmake:132 (qt_internal_create_wrapper_scripts)\n  cmake/QtBaseHelpers.cmake:193 (include)\n  CMakeLists.txt:36 (qt_internal_qtbase_build_repo)\n\n\nCMake Error at cmake/QtInstallHelpers.cmake:49 (file):\n  file COPY cannot find\n  \"/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/libexec/qt-internal-strip.in\":\n  No such file or directory.\nCall Stack (most recent call first):\n  cmake/QtInstallHelpers.cmake:95 (qt_non_prefix_copy)\n  cmake/QtBaseGlobalTargets.cmake:286 (qt_copy_or_install)\n  cmake/QtBaseHelpers.cmake:193 (include)\n  CMakeLists.txt:36 (qt_internal_qtbase_build_repo)\n\n\nCMake Error at cmake/QtInstallHelpers.cmake:49 (file):\n  file COPY cannot find\n  \"/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/libexec/qt-internal-strip.bat.in\":\n  No such file or directory.\nCall Stack (most recent call first):\n  cmake/QtInstallHelpers.cmake:95 (qt_non_prefix_copy)\n  cmake/QtBaseGlobalTargets.cmake:290 (qt_copy_or_install)\n  cmake/QtBaseHelpers.cmake:193 (include)\n  CMakeLists.txt:36 (qt_internal_qtbase_build_repo)\n\n\nCMake Error at cmake/QtBaseHelpers.cmake:223 (add_subdirectory):\n  add_subdirectory given source \"qmake\" which is not an existing directory.\nCall Stack (most recent call first):\n  CMakeLists.txt:36 (qt_internal_qtbase_build_repo)"
+            }
+          }
+        },
+        {
+          "display": "qt configure failed:\n```\n\nCMake Error at cmake/QtIRProcessHelpers.cmake:173 (message):\n\n  /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/configure\n  -top-level -platform wasm-emscripten -qt-host-path\n  /opt/homebrew/Cellar/qt/6.9.2 -prefix\n  /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase\n  -opensource -confirm-license -release -static -no-feature-thread -no-opengl\n  -nomake examples -nomake tests -no-dbus -no-ssl -no-pch -skip qtwebengine\n  -skip qtwayland -skip qtdoc exited with status: 1\n\nCall Stack (most recent call first):\n  cmake/QtTopLevelHelpers.cmake:35 (qt_ir_execute_process_and_log_and_handle_error)\n  cmake/QtTopLevelHelpers.cmake:57 (qt_tl_run_toplevel_configure)\n  cmake/QtTopLevelConfigureScript.cmake:16 (qt_tl_run_main_script)\n\n```",
+          "pastedContents": {}
+        },
+        {
+          "display": "update the build script to configure and build Qt",
+          "pastedContents": {}
+        },
+        {
+          "display": "ah, lets also clean qt and rebuild it",
+          "pastedContents": {}
+        },
+        {
+          "display": "no joy. I'm going to delve in myself. Can you add an option to build-wasm.sh to build all from clean?",
+          "pastedContents": {}
+        },
+        {
+          "display": "continue",
+          "pastedContents": {}
+        },
+        {
+          "display": "Still the same with hard cache clear and reload: unknown type b. When i tested http://localhost:8081/test-embind.html, there were no console messages at all.",
+          "pastedContents": {}
+        },
+        {
+          "display": "no output at all, just the title",
+          "pastedContents": {}
+        },
+        {
+          "display": "i think you'd need to use emscripten's nm ?",
+          "pastedContents": {}
+        },
+        {
+          "display": "yep, still shows same error.\nthis gives a bit of an overview how embind works: https://web.dev/articles/embind and the embind documentation is here: https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html#classes. I think we need to inspect the bindings that are generated, if indeed they are!",
+          "pastedContents": {}
+        },
+        {
+          "display": "i'm afraid it just showed thr qt logo and \"Application exit (parameter 0 has unknown type b)\" ><",
+          "pastedContents": {}
+        },
+        {
+          "display": "damn, still getting \n```\nqucs-s.js:1  Uncaught BindingError: parameter 0 has unknown type b\n    at throwBindingError (qucs-s.js:1:63631)\n    at requireRegisteredType (qucs-s.js:1:102396)\n    at emval_lookupTypes (qucs-s.js:1:102587)\n    at __emval_create_invoker (qucs-s.js:1:103175)\n    at qucs-s.wasm:0x1274245\n    at qucs-s.wasm:0x1415d65\n    at wrapper (qucs-s.js:1:85650)\n    at invoke_iiii (qucs-s.js:1:231745)\n    at qucs-s.wasm:0x12757ae\n    at qucs-s.wasm:0x14162d2\n```",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm, we get a JS error, what could be causing this?\n```\nqucs-s.js:1  Uncaught BindingError: parameter 0 has unknown type b\n    at throwBindingError (qucs-s.js:1:65264)\n    at requireRegisteredType (qucs-s.js:1:99480)\n    at emval_lookupTypes (qucs-s.js:1:99671)\n    at __emval_create_invoker (qucs-s.js:1:100259)\n    at qucs-s.wasm:0xb593ce\n    at invoke_iiii (qucs-s.js:1:219600)\n    at qucs-s.wasm:0xb59e72\n    at invoke_ii (qucs-s.js:1:219755)\n    at qucs-s.wasm:0x5e61fa\n    at qucs-s.wasm:0xc383e\n```",
+          "pastedContents": {}
+        },
+        {
+          "display": "ooh, add a script to launch this in a browser",
+          "pastedContents": {}
+        },
+        {
+          "display": "that got us a lot further. now at 98%, but fails with these errors:\n```\n[Pasted text #1 +15 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/qucs_init.cpp:1127:3: error: use of undeclared identifier 'octDock'\n 1127 |   octDock->setVisible(toggle);\n      |   ^~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/qucs_init.cpp:1129:5: error: use of undeclared identifier 'octave'\n 1129 |     octave->startOctave();\n      |     ^~~~~~\n2 errors generated.\nmake[2]: *** [qucs/CMakeFiles/qucs-s.dir/qucs_init.cpp.o] Error 1\nmake[2]: *** Waiting for unfinished jobs....\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/schematic_file.cpp:810:11: error: unknown type name 'QProcess'\n  810 |           QProcess builder;\n      |           ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/schematic_file.cpp:811:41: error: use of undeclared identifier 'QProcess'\n  811 |           builder.setProcessChannelMode(QProcess::MergedChannels);\n      |                                         ^\n2 errors generated."
+            }
+          }
+        },
+        {
+          "display": "yep, lets start with that",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets seperate external simulators from other  external tools, and lets classify those other tools into sensible categories",
+          "pastedContents": {}
+        },
+        {
+          "display": "are all the qprocess uses for external simulators, or are other tools called?",
+          "pastedContents": {}
+        },
+        {
+          "display": "2",
+          "pastedContents": {}
+        },
+        {
+          "display": "```\n[Pasted text #1 +329 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:407:21: error: allocation of incomplete type\n      'QProcess'\n  407 |     SpicePrep = new QProcess(this);\n      |                     ^~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.h:33:7: note: forward declaration of 'QProcess'\n   33 | class QProcess;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:419:7: error: no matching member function for call to\n      'connect'\n  419 |       connect(SpicePrep, SIGNAL(readyReadStandardOutput()), SLOT(slotSkipOut()));\n      |       ^~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:405:41: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  405 | inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,\n      |                                         ^       ~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:279:9: note: candidate template\n      ignored: substitution failure [with Func1 = const char *, Func2 = const char *]: no type named 'Object' in 'QtPrivate::FunctionPointer<const char *>'\n  279 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 &&slot)\n      |         ^                                                         ~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:209:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  209 |     static QMetaObject::Connection connect(const QObject *sender, const char *signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  210 |                         const QObject *receiver, const char *member, Qt::ConnectionType = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:212:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  212 |     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  213 |                         const QObject *receiver, const QMetaMethod &method,\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  214 |                         Qt::ConnectionType type = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:230:9: note: candidate function\n      template not viable: requires at least 4 arguments, but 3 were provided\n  230 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,\n      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  231 |                 const typename QtPrivate::ContextTypeForFunctor<Func2>::ContextType *context, Func2 &&slot,\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  232 |                 Qt::ConnectionType type = Qt::AutoConnection)\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:420:7: error: no matching member function for call to\n      'connect'\n  420 |       connect(SpicePrep, SIGNAL(readyReadStandardError()), SLOT(slotGetPrepErr()));\n      |       ^~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:405:41: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  405 | inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,\n      |                                         ^       ~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:279:9: note: candidate template\n      ignored: substitution failure [with Func1 = const char *, Func2 = const char *]: no type named 'Object' in 'QtPrivate::FunctionPointer<const char *>'\n  279 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 &&slot)\n      |         ^                                                         ~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:209:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  209 |     static QMetaObject::Connection connect(const QObject *sender, const char *signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  210 |                         const QObject *receiver, const char *member, Qt::ConnectionType = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:212:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  212 |     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  213 |                         const QObject *receiver, const QMetaMethod &method,\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  214 |                         Qt::ConnectionType type = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:230:9: note: candidate function\n      template not viable: requires at least 4 arguments, but 3 were provided\n  230 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,\n      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  231 |                 const typename QtPrivate::ContextTypeForFunctor<Func2>::ContextType *context, Func2 &&slot,\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  232 |                 Qt::ConnectionType type = Qt::AutoConnection)\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:424:7: error: no matching member function for call to\n      'connect'\n  424 |       connect(SpicePrep, SIGNAL(readyReadStandardOutput()), SLOT(slotGetPrepOut()));\n      |       ^~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:405:41: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  405 | inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,\n      |                                         ^       ~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:279:9: note: candidate template\n      ignored: substitution failure [with Func1 = const char *, Func2 = const char *]: no type named 'Object' in 'QtPrivate::FunctionPointer<const char *>'\n  279 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 &&slot)\n      |         ^                                                         ~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:209:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  209 |     static QMetaObject::Connection connect(const QObject *sender, const char *signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  210 |                         const QObject *receiver, const char *member, Qt::ConnectionType = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:212:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  212 |     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  213 |                         const QObject *receiver, const QMetaMethod &method,\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  214 |                         Qt::ConnectionType type = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:230:9: note: candidate function\n      template not viable: requires at least 4 arguments, but 3 were provided\n  230 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,\n      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  231 |                 const typename QtPrivate::ContextTypeForFunctor<Func2>::ContextType *context, Func2 &&slot,\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  232 |                 Qt::ConnectionType type = Qt::AutoConnection)\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:425:7: error: no matching member function for call to\n      'connect'\n  425 |       connect(SpicePrep, SIGNAL(readyReadStandardError()), SLOT(slotGetPrepErr()));\n      |       ^~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:405:41: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  405 | inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,\n      |                                         ^       ~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:279:9: note: candidate template\n      ignored: substitution failure [with Func1 = const char *, Func2 = const char *]: no type named 'Object' in 'QtPrivate::FunctionPointer<const char *>'\n  279 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 &&slot)\n      |         ^                                                         ~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:209:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  209 |     static QMetaObject::Connection connect(const QObject *sender, const char *signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  210 |                         const QObject *receiver, const char *member, Qt::ConnectionType = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:212:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  212 |     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  213 |                         const QObject *receiver, const QMetaMethod &method,\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  214 |                         Qt::ConnectionType type = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:230:9: note: candidate function\n      template not viable: requires at least 4 arguments, but 3 were provided\n  230 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,\n      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  231 |                 const typename QtPrivate::ContextTypeForFunctor<Func2>::ContextType *context, Func2 &&slot,\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  232 |                 Qt::ConnectionType type = Qt::AutoConnection)\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:432:5: error: no matching member function for call to\n      'connect'\n  432 |     connect(SpicePrep, SIGNAL(finished(int, QProcess::ExitStatus)), MBox, SLOT(close()));\n      |     ^~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:209:36: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  209 |     static QMetaObject::Connection connect(const QObject *sender, const char *signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:212:36: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  212 |     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:405:41: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  405 | inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,\n      |                                         ^       ~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:230:9: note: candidate template\n      ignored: substitution failure [with Func1 = const char *, Func2 = const char *]: no type named 'Object' in 'QtPrivate::FunctionPointer<const char *>'\n  230 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,\n      |         ^                                                         ~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:279:9: note: candidate function\n      template not viable: requires 3 arguments, but 4 were provided\n  279 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 &&slot)\n      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:446:14: error: member access into incomplete type\n      'QProcess'\n  446 |     SpicePrep->start(spiceExe, spiceArgs);\n      |              ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.h:33:7: note: forward declaration of 'QProcess'\n   33 | class QProcess;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:447:14: error: member access into incomplete type\n      'QProcess'\n  447 |     SpicePrep->waitForStarted();\n      |              ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.h:33:7: note: forward declaration of 'QProcess'\n   33 | class QProcess;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:448:19: error: member access into incomplete type\n      'QProcess'\n  448 |     if ((SpicePrep->state() != QProcess::Starting) &&\n      |                   ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.h:33:7: note: forward declaration of 'QProcess'\n   33 | class QProcess;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:448:32: error: incomplete type 'QProcess' named in\n      nested name specifier\n  448 |     if ((SpicePrep->state() != QProcess::Starting) &&\n      |                                ^~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.h:33:7: note: forward declaration of 'QProcess'\n   33 | class QProcess;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:449:19: error: member access into incomplete type\n      'QProcess'\n  449 |         (SpicePrep->state() != QProcess::Running))\n      |                   ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.h:33:7: note: forward declaration of 'QProcess'\n   33 | class QProcess;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:449:32: error: incomplete type 'QProcess' named in\n      nested name specifier\n  449 |         (SpicePrep->state() != QProcess::Running))\n      |                                ^~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.h:33:7: note: forward declaration of 'QProcess'\n   33 | class QProcess;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:480:22: error: allocation of incomplete type\n      'QProcess'\n  480 |       QucsConv = new QProcess(this);\n      |                      ^~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.h:33:7: note: forward declaration of 'QProcess'\n   33 | class QProcess;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:491:7: error: no matching member function for call to\n      'connect'\n  491 |       connect(QucsConv, SIGNAL(readyReadStandardOutput()), SLOT(slotGetNetlist()));\n      |       ^~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:405:41: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  405 | inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,\n      |                                         ^       ~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:279:9: note: candidate template\n      ignored: substitution failure [with Func1 = const char *, Func2 = const char *]: no type named 'Object' in 'QtPrivate::FunctionPointer<const char *>'\n  279 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 &&slot)\n      |         ^                                                         ~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:209:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  209 |     static QMetaObject::Connection connect(const QObject *sender, const char *signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  210 |                         const QObject *receiver, const char *member, Qt::ConnectionType = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:212:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  212 |     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  213 |                         const QObject *receiver, const QMetaMethod &method,\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  214 |                         Qt::ConnectionType type = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:230:9: note: candidate function\n      template not viable: requires at least 4 arguments, but 3 were provided\n  230 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,\n      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  231 |                 const typename QtPrivate::ContextTypeForFunctor<Func2>::ContextType *context, Func2 &&slot,\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  232 |                 Qt::ConnectionType type = Qt::AutoConnection)\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:492:7: error: no matching member function for call to\n      'connect'\n  492 |       connect(QucsConv, SIGNAL(readyReadStandardError()), SLOT(slotGetError()));\n      |       ^~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:405:41: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  405 | inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,\n      |                                         ^       ~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:279:9: note: candidate template\n      ignored: substitution failure [with Func1 = const char *, Func2 = const char *]: no type named 'Object' in 'QtPrivate::FunctionPointer<const char *>'\n  279 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 &&slot)\n      |         ^                                                         ~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:209:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  209 |     static QMetaObject::Connection connect(const QObject *sender, const char *signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  210 |                         const QObject *receiver, const char *member, Qt::ConnectionType = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:212:36: note: candidate function\n      not viable: requires at least 4 arguments, but 3 were provided\n  212 |     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  213 |                         const QObject *receiver, const QMetaMethod &method,\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  214 |                         Qt::ConnectionType type = Qt::AutoConnection);\n      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:230:9: note: candidate function\n      template not viable: requires at least 4 arguments, but 3 were provided\n  230 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,\n      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  231 |                 const typename QtPrivate::ContextTypeForFunctor<Func2>::ContextType *context, Func2 &&slot,\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  232 |                 Qt::ConnectionType type = Qt::AutoConnection)\n      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:499:7: error: no matching member function for call to\n      'connect'\n  499 |       connect(QucsConv, SIGNAL(finished(int, QProcess::ExitStatus)), MBox, SLOT(close()));\n      |       ^~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:209:36: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  209 |     static QMetaObject::Connection connect(const QObject *sender, const char *signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:212:36: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  212 |     static QMetaObject::Connection connect(const QObject *sender, const QMetaMethod &signal,\n      |                                    ^       ~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:405:41: note: candidate function\n      not viable: cannot convert argument of incomplete type 'QProcess *' to 'const QObject *' for 1st argument\n  405 | inline QMetaObject::Connection QObject::connect(const QObject *asender, const char *asignal,\n      |                                         ^       ~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:230:9: note: candidate template\n      ignored: substitution failure [with Func1 = const char *, Func2 = const char *]: no type named 'Object' in 'QtPrivate::FunctionPointer<const char *>'\n  230 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,\n      |         ^                                                         ~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/src/corelib/kernel/qobject.h:279:9: note: candidate function\n      template not viable: requires 3 arguments, but 4 were provided\n  279 |         connect(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 &&slot)\n      |         ^       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:501:15: error: member access into incomplete type\n      'QProcess'\n  501 |       QucsConv->start(Program, Arguments);\n      |               ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.h:33:7: note: forward declaration of 'QProcess'\n   33 | class QProcess;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:502:15: error: member access into incomplete type\n      'QProcess'\n  502 |       QucsConv->waitForStarted();\n      |               ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.h:33:7: note: forward declaration of 'QProcess'\n   33 | class QProcess;\n      |       ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.cpp:504:18: error: member access into incomplete type\n      'QProcess'\n  504 |       if(QucsConv->state() != QProcess::Running)\n      |                  ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qucs_s/qucs/components/spicedialog.h:33:7: note: forward declaration of 'QProcess'\n   33 | class QProcess;\n      |       ^\nfatal error: too many errors emitted, stopping now [-ferror-limit=]"
+            }
+          }
+        },
+        {
+          "display": "here's the error log:",
+          "pastedContents": {}
+        },
+        {
+          "display": "ah, we're getting issues because QProcess isn't supported on emscripten, and there's still some usage when WITH_EXTERNAL_SIMULATORS=OFF. Analyse please!",
+          "pastedContents": {}
+        },
+        {
+          "display": "great! \nnow we are at a linking error:\n[Pasted text #1 +22 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "[ 60%] Linking CXX executable qucs-sspar-viewer.js\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qbytearray.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_get_global\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_new_cstring\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_get_property\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_new_cstring\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_get_property\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_decref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_create_invoker\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_incref\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_invoke\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_run_destructors\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_create_invoker\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_invoke\nwasm-ld: error: /Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/qt-everywhere-src-6.9.2/qtbase/lib/libQt6Core.a(qlocale_wasm.cpp.o): undefined symbol: _emval_run_destructors\nwasm-ld: error: too many errors emitted, stopping now (use -error-limit=0 to see all errors)\nem++: error: '/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/emsdk/upstream/bin/wasm-ld @/var/folders/2l/j6p8b2gx4pb3227hlrcvfzrw0000gn/T/emscripten_3l99zqz5.rsp.utf-8' failed (returned 1)"
+            }
+          }
+        },
+        {
+          "display": "continue",
+          "pastedContents": {}
+        },
+        {
+          "display": "I actually meant that we should commit the configure cache and use that by default in build-wasm.sh",
+          "pastedContents": {}
+        },
+        {
+          "display": "I just thought, it would be faster to build ngspice if we cache the config status against emscripten",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets add a task to remember to create a patch for ngspice to fix this upstream",
+          "pastedContents": {}
+        },
+        {
+          "display": "that seems to work, well done. Now we have this issue:\n```\n[Pasted text #1 +18 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "Making all in icm\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/emsdk/upstream/emscripten/emcc -O2 -DEMSCRIPTEN -fvisibility=hidden -std=gnu11 -I../../../../src/xspice/icm/../../include -I/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/ngspice/build-wasm/src/xspice/icm/../../include -fPIC -o dstring.o -c ../../../../src/xspice/icm/../../misc/dstring.c\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/emsdk/upstream/emscripten/emcc -O2 -DEMSCRIPTEN -fvisibility=hidden -std=gnu11 -I../../../../src/xspice/icm/../tlines -I../../../../src/xspice/icm/../../include -I/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/ngspice/build-wasm/src/xspice/icm/../../include -fPIC -o msline_common.o -c ../../../../src/xspice/icm/../tlines/msline_common.c\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/emsdk/upstream/emscripten/emcc -O2 -DEMSCRIPTEN -fvisibility=hidden -std=gnu11 -I../../../../src/xspice/icm/../tlines -I../../../../src/xspice/icm/../../include -I/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/ngspice/build-wasm/src/xspice/icm/../../include -fPIC -o tline_common.o -c ../../../../src/xspice/icm/../tlines/tline_common.c\nfor cm in spice2poly digital analog xtradev xtraevt table tlines ; do \\\n        /Applications/Xcode.app/Contents/Developer/usr/bin/make cm=$cm $cm/$cm.cm \\\n        || exit 1; \\\n    done\nmake[4]: execvp: ../cmpp/cmpp: Permission denied\nmake[4]: execvp: ../cmpp/cmpp: Permission denied\n/opt/homebrew/bin/gmkdir -p spice2poly   spice2poly/.deps\n/opt/homebrew/bin/gmkdir -p spice2poly   spice2poly/.deps\nCMPP_IDIR=../../../../src/xspice/icm/spice2poly CMPP_ODIR=spice2poly ../../../src/xspice/cmpp/cmpp -lst\n/bin/sh: ../../../src/xspice/cmpp/cmpp: Permission denied\nmake[4]: *** [spice2poly/cminfo.h] Error 126\nmake[3]: *** [all] Error 1\nmake[2]: *** [all-recursive] Error 1\nmake[1]: *** [all-recursive] Error 1\nmake: *** [all-recursive] Error 1"
+            }
+          }
+        },
+        {
+          "display": "hmm, we got this error, and i'm not sure how to fix it:\n```\n[Pasted text #1 +25 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "In file included from ../../../../../src/spicelib/devices/hicum2/hicumL2.cpp:21:\n../../../../../src/include/cppduals/duals/dual:490:8: error: 'is_compound' cannot be specialized: Users are not allowed to specialize this\n      standard library entity [-Winvalid-specialization]\n  490 | struct is_compound<duals::dual<T>> : true_type {};\n      |        ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_compound.h:25:29: note:\n      marked '_Clang::no_specializations' here\nIn file included from    25../../../../../src/spicelib/devices/hicum2/hicumL2temp.cpp:11:\n../../../../../src/include/cppduals/duals/dual:490:8: error: 'is_compound' cannot be specialized: Users are not allowed to specialize this\n      standard library entity [-Winvalid-specialization]\n  490 | struct is_compound<duals::dual<T>> : true_type {};\n      |        ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__type_traits/is_compound.h:25:29: note:\n      marked '_Clang::no_specializations' here\n   25 | struct _LIBCPP_TEMPLATE_VIS _LIBCPP_NO_SPECIALIZATIONS is_compound : _BoolConstant<__is_compound(_Tp)> {};\n      |                             ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__config:1177:9: note: expanded from\n      macro '_LIBCPP_NO_SPECIALIZATIONS'\n 1177 |       [[_Clang::__no_specializations__(\"Users are not allowed to specialize this standard library entity\")]]\n      |         ^\n | struct _LIBCPP_TEMPLATE_VIS _LIBCPP_NO_SPECIALIZATIONS is_compound : _BoolConstant<__is_compound(_Tp)> {};\n      |                             ^\n/Users/roberttaylor/Code/ChipFlow/Analog/qucs-online/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1/__config:1177:9: note: expanded from\n      macro '_LIBCPP_NO_SPECIALIZATIONS'\n 1177 |       [[_Clang::__no_specializations__(\"Users are not allowed to specialize this standard library entity\")]]\n      |         ^"
+            }
+          }
+        },
+        {
+          "display": "ah, when building on macos, we need to use newer bison/flex than comes with macos. Use the ones installed in brew (and for macos, check they are installed in the script) ",
+          "pastedContents": {}
+        },
+        {
+          "display": "ah, the issue is that emscripten doesnt really have linking, so AC_CHECK_FUNC/AC_CHECK_FUNCS doesn't actually work. the fix is to pass 'ac_cv_func_queryperformancecounter=no'  to configure",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm, seems that the ngspice codebase assumes that HAVE_QUERYPERFORMANCECOUNTER set implies win32 in the misc_time.c. Lets force it to unset",
+          "pastedContents": {}
+        },
+        {
+          "display": "seems that its building for windows, so we probably have a problem with configuring",
+          "pastedContents": {}
+        },
+        {
+          "display": "hmm we're getting this error:\n```\n[Pasted text #1 +23 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "  CC       wlist.lo\n../../../src/misc/misc_time.c:115:5: error: use of undeclared identifier 'LARGE_INTEGER'\n  115 |     LARGE_INTEGER frequency, counter;\n      |     ^~~~~~~~~~~~~\n../../../src/misc/misc_time.c:116:5: error: call to undeclared function 'QueryPerformanceFrequency'; ISO C99 and later do not support implicit\n      function declarations [-Wimplicit-function-declaration]\n  116 |     QueryPerformanceFrequency(&frequency);\n      |     ^\n../../../src/misc/misc_time.c:116:32: error: use of undeclared identifier 'frequency'\n  116 |     QueryPerformanceFrequency(&frequency);\n      |                                ^~~~~~~~~\n../../../src/misc/misc_time.c:117:5: error: call to undeclared function 'QueryPerformanceCounter'; ISO C99 and later do not support implicit\n      function declarations [-Wimplicit-function-declaration]\n  117 |     QueryPerformanceCounter(&counter);\n      |     ^\n../../../src/misc/misc_time.c:117:30: error: use of undeclared identifier 'counter'\n  117 |     QueryPerformanceCounter(&counter);\n      |                              ^~~~~~~\n../../../src/misc/misc_time.c:118:21: error: use of undeclared identifier 'counter'\n  118 |     return ((double)counter.QuadPart / frequency.QuadPart - timebegin.secs);\n      |                     ^~~~~~~\n../../../src/misc/misc_time.c:118:40: error: use of undeclared identifier 'frequency'\n  118 |     return ((double)counter.QuadPart / frequency.QuadPart - timebegin.secs);\n      |                                        ^~~~~~~~~"
+            }
+          }
+        },
+        {
+          "display": "we're getting \n```\n../../../src/misc/misc_time.c:53:10: fatal error: 'omp.h' file not found\n```\nwhen building ngspice. lets disable USE_OMP",
+          "pastedContents": {}
+        },
+        {
+          "display": "cmake giving warnings and errors:\n```\n[Pasted text #1 +398 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "CMake Warning (dev) at qtbase/cmake/QtPublicSbomGenerationHelpers.cmake:73 (cmake_parse_arguments):\n  The PROJECT_COMMENT keyword was followed by an empty string or no value at\n  all.  Policy CMP0174 is not set, so cmake_parse_arguments() will unset the\n  arg_PROJECT_COMMENT variable rather than setting it to an empty string.\nCall Stack (most recent call first):\n  qtbase/cmake/QtPublicSbomHelpers.cmake:217 (_qt_internal_sbom_begin_project_generate)\n  qtbase/cmake/QtPublicSbomHelpers.cmake:478 (_qt_internal_sbom_begin_project)\n  qtbase/cmake/QtPublicSbomHelpers.cmake:441 (_qt_internal_sbom_begin_qt_repo_project)\n  qtbase/cmake/QtBuildRepoHelpers.cmake:354 (_qt_internal_sbom_auto_begin_qt_repo_project)\n  qtbase/cmake/QtBaseHelpers.cmake:154 (qt_build_repo_begin)\n  qtbase/CMakeLists.txt:32 (qt_internal_qtbase_build_repo)\nThis warning is for project developers.  Use -Wno-dev to suppress it.\n\nCMake Warning (dev) at /opt/homebrew/lib/cmake/DBus1/DBus1Config.cmake:76 (add_library):\n  ADD_LIBRARY called with SHARED option but the target platform does not\n  support dynamic linking.  Building a STATIC library instead.  This may lead\n  to problems.\nCall Stack (most recent call first):\n  qtbase/cmake/FindWrapDBus1.cmake:25 (find_package)\n  qtbase/cmake/QtFindPackageHelpers.cmake:141 (find_package)\n  qtbase/configure.cmake:125 (qt_find_package)\n  qtbase/cmake/QtBaseGlobalTargets.cmake:82 (include)\n  qtbase/cmake/QtBaseHelpers.cmake:186 (include)\n  qtbase/CMakeLists.txt:32 (qt_internal_qtbase_build_repo)\nThis warning is for project developers.  Use -Wno-dev to suppress it.\n\nCMake Warning (dev) at /opt/homebrew/lib/cmake/DBus1/DBus1Config.cmake:76 (add_library):\n  ADD_LIBRARY called with SHARED option but the target platform does not\n  support dynamic linking.  Building a STATIC library instead.  This may lead\n  to problems.\nCall Stack (most recent call first):\n  qtbase/cmake/FindWrapDBus1.cmake:25 (find_package)\n  qtbase/cmake/QtFindPackageHelpers.cmake:141 (find_package)\n  qtbase/configure.cmake:125 (qt_find_package)\n  qtbase/cmake/QtBaseGlobalTargets.cmake:82 (include)\n  qtbase/cmake/QtBaseHelpers.cmake:186 (include)\n  qtbase/CMakeLists.txt:32 (qt_internal_qtbase_build_repo)\nThis warning is for project developers.  Use -Wno-dev to suppress it.\n\nCMake Error at /opt/homebrew/lib/cmake/DBus1/DBus1Config.cmake:76 (add_library):\n  add_library cannot create imported target \"dbus-1\" because another target\n  with the same name already exists.\nCall Stack (most recent call first):\n  qtbase/cmake/FindWrapDBus1.cmake:25 (find_package)\n  qtbase/cmake/QtFindPackageHelpers.cmake:141 (find_package)\n  qtbase/configure.cmake:125 (qt_find_package)\n  qtbase/cmake/QtBaseGlobalTargets.cmake:82 (include)\n  qtbase/cmake/QtBaseHelpers.cmake:186 (include)\n  qtbase/CMakeLists.txt:32 (qt_internal_qtbase_build_repo)\n\n\nCMake Warning (dev) at /Users/roberttaylor/.conan2/p/qt30a3d6f88a8d4/s/src/qtbase/config.tests/no_direct_extern_access/CMakeLists.txt:9 (add_library):\n  ADD_LIBRARY called with SHARED option but the target platform does not\n  support dynamic linking.  Building a STATIC library instead.  This may lead\n  to problems.\nThis warning is for project developers.  Use -Wno-dev to suppress it.\n\nCMake Error at qtbase/cmake/QtBuildInformation.cmake:534 (message):\n  Feature \"system_pcre2\": Forcing to \"ON\" breaks its condition:\n\n      WrapSystemPCRE2_FOUND\n\n  Condition values dump:\n\n      WrapSystemPCRE2_FOUND = \"FALSE\"\n\nCall Stack (most recent call first):\n  qtbase/cmake/QtFeature.cmake:331 (qt_configure_add_report_error)\n  qtbase/cmake/QtFeature.cmake:451 (qt_feature_check_and_save_internal_value)\n  qtbase/cmake/QtFeature.cmake:141 (qt_evaluate_feature)\n  qtbase/cmake/QtFeature.cmake:180 (qt_internal_evaluate_config_expression)\n  qtbase/cmake/QtFeature.cmake:405 (qt_evaluate_config_expression)\n  qtbase/cmake/QtFeature.cmake:720 (qt_evaluate_feature)\n  qtbase/cmake/QtFeature.cmake:689 (qt_feature_module_end)\n  qtbase/src/CMakeLists.txt:8 (qt_feature_evaluate_features)\n\n\nCMake Warning (dev) at /opt/homebrew/lib/cmake/md4c/md4cConfig.cmake:59 (add_library):\n  ADD_LIBRARY called with SHARED option but the target platform does not\n  support dynamic linking.  Building a STATIC library instead.  This may lead\n  to problems.\nCall Stack (most recent call first):\n  qtbase/cmake/FindWrapSystemMd4c.cmake:10 (find_package)\n  qtbase/cmake/QtFindPackageHelpers.cmake:141 (find_package)\n  qtbase/src/gui/configure.cmake:61 (qt_find_package)\n  qtbase/cmake/QtFeature.cmake:687 (include)\n  qtbase/src/CMakeLists.txt:13 (qt_feature_evaluate_features)\nThis warning is for project developers.  Use -Wno-dev to suppress it.\n\nCMake Warning (dev) at /opt/homebrew/lib/cmake/md4c/md4cConfig.cmake:66 (add_library):\n  ADD_LIBRARY called with SHARED option but the target platform does not\n  support dynamic linking.  Building a STATIC library instead.  This may lead\n  to problems.\nCall Stack (most recent call first):\n  qtbase/cmake/FindWrapSystemMd4c.cmake:10 (find_package)\n  qtbase/cmake/QtFindPackageHelpers.cmake:141 (find_package)\n  qtbase/src/gui/configure.cmake:61 (qt_find_package)\n  qtbase/cmake/QtFeature.cmake:687 (include)\n  qtbase/src/CMakeLists.txt:13 (qt_feature_evaluate_features)\nThis warning is for project developers.  Use -Wno-dev to suppress it.\n\nCMake Error at qtbase/cmake/QtBuildInformation.cmake:534 (message):\n  Feature \"system_freetype\": Forcing to \"ON\" breaks its condition:\n\n      QT_FEATURE_freetype AND WrapSystemFreetype_FOUND\n\n  Condition values dump:\n\n      QT_FEATURE_freetype = \"ON\"\n      WrapSystemFreetype_FOUND = \"FALSE\"\n\nCall Stack (most recent call first):\n  qtbase/cmake/QtFeature.cmake:331 (qt_configure_add_report_error)\n  qtbase/cmake/QtFeature.cmake:451 (qt_feature_check_and_save_internal_value)\n  qtbase/cmake/QtFeature.cmake:141 (qt_evaluate_feature)\n  qtbase/cmake/QtFeature.cmake:180 (qt_internal_evaluate_config_expression)\n  qtbase/cmake/QtFeature.cmake:405 (qt_evaluate_config_expression)\n  qtbase/cmake/QtFeature.cmake:720 (qt_evaluate_feature)\n  qtbase/cmake/QtFeature.cmake:689 (qt_feature_module_end)\n  qtbase/src/CMakeLists.txt:13 (qt_feature_evaluate_features)\n\n\nCMake Error at qtbase/cmake/QtBuildInformation.cmake:534 (message):\n  Feature \"opengl_desktop\": Forcing to \"ON\" breaks its condition:\n\n      ( WIN32 AND ( MSVC OR WrapOpenGL_FOUND ) ) OR ( NOT WATCHOS AND NOT WIN32 AND NOT WASM AND WrapOpenGL_FOUND )\n\n  Condition values dump:\n\n      WIN32 = \"\"\n      MSVC = \"\"\n      WrapOpenGL_FOUND = \"FALSE\"\n      WATCHOS = \"0\"\n      WIN32 = \"\"\n      WASM = \"1\"\n      WrapOpenGL_FOUND = \"FALSE\"\n\nCall Stack (most recent call first):\n  qtbase/cmake/QtFeature.cmake:331 (qt_configure_add_report_error)\n  qtbase/cmake/QtFeature.cmake:451 (qt_feature_check_and_save_internal_value)\n  qtbase/cmake/QtFeature.cmake:141 (qt_evaluate_feature)\n  qtbase/cmake/QtFeature.cmake:180 (qt_internal_evaluate_config_expression)\n  qtbase/cmake/QtFeature.cmake:405 (qt_evaluate_config_expression)\n  qtbase/cmake/QtFeature.cmake:720 (qt_evaluate_feature)\n  qtbase/cmake/QtFeature.cmake:689 (qt_feature_module_end)\n  qtbase/src/CMakeLists.txt:13 (qt_feature_evaluate_features)\n\n\nCMake Error at qtbase/cmake/QtBuildInformation.cmake:534 (message):\n  Feature \"system_harfbuzz\": Forcing to \"ON\" breaks its condition:\n\n      QT_FEATURE_harfbuzz AND WrapSystemHarfbuzz_FOUND\n\n  Condition values dump:\n\n      QT_FEATURE_harfbuzz = \"ON\"\n      WrapSystemHarfbuzz_FOUND = \"FALSE\"\n\nCall Stack (most recent call first):\n  qtbase/cmake/QtFeature.cmake:331 (qt_configure_add_report_error)\n  qtbase/cmake/QtFeature.cmake:451 (qt_feature_check_and_save_internal_value)\n  qtbase/cmake/QtFeature.cmake:720 (qt_evaluate_feature)\n  qtbase/cmake/QtFeature.cmake:689 (qt_feature_module_end)\n  qtbase/src/CMakeLists.txt:13 (qt_feature_evaluate_features)\n\n\nCMake Error at qtbase/cmake/QtBuildInformation.cmake:534 (message):\n  Feature \"system_png\": Forcing to \"ON\" breaks its condition:\n\n      QT_FEATURE_png AND WrapSystemPNG_FOUND\n\n  Condition values dump:\n\n      QT_FEATURE_png = \"ON\"\n      WrapSystemPNG_FOUND = \"FALSE\"\n\nCall Stack (most recent call first):\n  qtbase/cmake/QtFeature.cmake:331 (qt_configure_add_report_error)\n  qtbase/cmake/QtFeature.cmake:451 (qt_feature_check_and_save_internal_value)\n  qtbase/cmake/QtFeature.cmake:720 (qt_evaluate_feature)\n  qtbase/cmake/QtFeature.cmake:689 (qt_feature_module_end)\n  qtbase/src/CMakeLists.txt:13 (qt_feature_evaluate_features)\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/wasm_shell.html does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:65 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/syncqt/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtloader.js does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:67 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/syncqt/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtlogo.svg does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:69 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/syncqt/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/wasm_shell.html does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:65 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/moc/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtloader.js does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:67 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/moc/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtlogo.svg does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:69 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/moc/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/wasm_shell.html does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:65 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/rcc/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtloader.js does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:67 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/rcc/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtlogo.svg does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:69 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/rcc/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/wasm_shell.html does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:65 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/tracepointgen/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtloader.js does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:67 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/tracepointgen/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtlogo.svg does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:69 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/tracepointgen/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/wasm_shell.html does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:65 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/tracegen/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtloader.js does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:67 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/tracegen/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtlogo.svg does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:69 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/tracegen/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/wasm_shell.html does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:65 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/cmake_automoc_parser/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtloader.js does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:67 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/cmake_automoc_parser/CMakeLists.txt:DEFERRED\n\n\nCMake Error: File /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release/qtbase/plugins/platforms/qtlogo.svg does not exist.\nCMake Error at qtbase/src/corelib/Qt6WasmMacros.cmake:69 (configure_file):\n  configure_file Problem configuring file\nCall Stack (most recent call first):\n  qtbase/src/corelib/Qt6WasmMacros.cmake:163 (_qt_internal_wasm_add_target_helpers)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:751 (_qt_internal_finalize_wasm_app)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:823 (_qt_internal_finalize_executable)\n  qtbase/src/corelib/Qt6CoreMacros.cmake:861:EVAL:1 (qt6_finalize_target)\n  qtbase/src/tools/cmake_automoc_parser/CMakeLists.txt:DEFERRED\n\n\nCMake Error at qtbase/cmake/QtPublicSbomHelpers.cmake:1219 (message):\n  The target WrapPCRE2::WrapPCRE2 does not exist, use qt_internal_add_sbom to\n  create a target first, or call the function on any other exsiting target.\nCall Stack (most recent call first):\n  qtbase/cmake/QtSbomHelpers.cmake:16 (_qt_internal_extend_sbom)\n  qtbase/src/corelib/CMakeLists.txt:5 (qt_internal_extend_sbom)\n\n\n-- Configuring incomplete, errors occurred!\n\nqt/6.8.3: ERROR:\nPackage '730f8314c0d672dcc64ce049b3ac35970c6ee422' build failed\nqt/6.8.3: WARN: Build folder /Users/roberttaylor/.conan2/p/b/qtfedd88acd347c/b/build/Release\nERROR: qt/6.8.3: Error in build() method, line 819\n    cmake.configure()\n    ConanException: Error 1 while executing\n"
+            }
+          }
+        },
+        {
+          "display": "thansk! new error:\n```\n[Pasted text #1 +5 lines]\n```",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "libtool.sh: compile:  gcc -DHAVE_CONFIG_H -I. -I/Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src -I. -I/Users/roberttaylor/.colibtool.sh: compile:  gcc -DHAVE_CONFIG_H -I. -I/Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src -I. -I/Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src/include -Iinclude -I/Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src/src -DNDEBUG -DFFI_STATIC_BUILD -Wall -fPIC -fexceptions -MT src/java_raw_api.lo -MD -MP -MF src/.deps/java_raw_api.Tpo -c /Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src/src/java_raw_api.c -o src/java_raw_api.o\nnan2/p/b/libffaa399c786e8bc/b/src/include -Iinclude -I/Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src/src -DNDEBUG -DFFI_STATIC_BUILD -Wall -fPIC -fexceptions -MT src/wasm32/ffi.lo -MD -MP -MF src/wasm32/.deps/ffi.Tpo -c /Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src/src/wasm32/ffi.c -o src/wasm32/ffi.o\nlibtool.sh: compile:  gcc -DHAVE_CONFIG_H -I. -I/Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src -I. -I/Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src/include -Iinclude -I/Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src/src -DNDEBUG -DFFI_STATIC_BUILD -Wall -fPIC -fexceptions -MT src/raw_api.lo -MD -MP -MF src/.deps/raw_api.Tpo -c /Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src/src/raw_api.c -o src/raw_api.o\n/Users/roberttaylor/.conan2/p/b/libffaa399c786e8bc/b/src/src/wasm32/ffi.c:33:10: fatal error: 'emscripten/emscripten.h' file not found\n   33 | #include <emscripten/emscripten.h>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~"
+            }
+          }
+        },
+        {
+          "display": "i get the error :\n```\nqt/6.8.3: Invalid: The compiler.cppstd is not defined for this configuration\n```",
+          "pastedContents": {}
+        },
+        {
+          "display": "ok, so in nuild/ we have a build configured to build qucs_s with emscripten/wasm. First make a script that recreates this build. then add to this script to build libngspice for wasm, and reconfigure the qucs build to use NGSPICE_SHARED and disable process based backednd ",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "projectOnboardingSeenCount": 8,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [],
+      "hasCompletedProjectOnboarding": true,
+      "lastTotalWebSearchRequests": 0
+    },
+    "/Users/roberttaylor/Code/Time-Mode-Computation": {
+      "allowedTools": [],
+      "history": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "ignorePatterns": [],
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastCost": 1.3833967,
+      "lastAPIDuration": 80735,
+      "lastToolDuration": 5902,
+      "lastDuration": 2125952442,
+      "lastLinesAdded": 1,
+      "lastLinesRemoved": 3,
+      "lastTotalInputTokens": 3249,
+      "lastTotalOutputTokens": 1772,
+      "lastTotalCacheCreationInputTokens": 39882,
+      "lastTotalCacheReadInputTokens": 345098,
+      "lastTotalWebSearchRequests": 0,
+      "lastSessionId": "647d5a49-87ca-46a8-a5c1-b58669f62829"
+    },
+    "/Users/roberttaylor/Code/ChipFlow/Analog/qucs-wasm": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "ci failed, can you anayse",
+          "pastedContents": {}
+        },
+        {
+          "display": "push",
+          "pastedContents": {}
+        },
+        {
+          "display": "use actionlint to check the github ci",
+          "pastedContents": {}
+        },
+        {
+          "display": "idempotently",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets update the script to store any secrets in gcloud secret manager, and also to use the gh tool to create the secrets on the github repo",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets commit and push the script and ci",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets make the script set the PROJECT_ID and BUCKET_NAME if not passed to the script",
+          "pastedContents": {}
+        },
+        {
+          "display": "lets have the script create a project for this if not already created",
+          "pastedContents": {}
+        },
+        {
+          "display": "is the cloud setup script idempotent?",
+          "pastedContents": {}
+        },
+        {
+          "display": "all working now. Lets create some github CI to build and test, and some gcloud setup to deploy from CI",
+          "pastedContents": {}
+        },
+        {
+          "display": "it seems qucs_s has been sucessfully built with  NGSPICE_SHARED, but it is still showing \"No simulators found\" popup on startup, can you ascertain why?",
+          "pastedContents": {}
+        },
+        {
+          "display": "/init ",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": true,
+      "ignorePatterns": [],
+      "projectOnboardingSeenCount": 3,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "build.rs",
+        "main.rs",
+        "app.js",
+        "index.tsx",
+        "server.py"
+      ],
+      "lastTotalWebSearchRequests": 0,
+      "exampleFilesGeneratedAt": 1760897181442,
+      "hasCompletedProjectOnboarding": true
+    }
+  },
+  "lastPlanModeUse": 1760744273301,
+  "firstStartTime": "2025-10-15T23:51:16.012Z",
+  "sonnet45MigrationComplete": true,
+  "cachedChangelog": "# Changelog\n\n## 2.0.22\n\n- Fixed content layout shift when scrolling through slash commands\n- IDE: Add toggle to enable/disable thinking.\n- Fix bug causing duplicate permission prompts with parallel tool calls\n- Add support for enterprise managed MCP allowlist and denylist\n\n## 2.0.21\n\n- Support MCP `structuredContent` field in tool responses\n- Added an interactive question tool\n- Claude will now ask you questions more often in plan mode\n- Added Haiku 4.5 as a model option for Pro users\n- Fixed an issue where queued commands don't have access to previous messages' output\n\n## 2.0.20\n\n- Added support for Claude Skills\n\n## 2.0.19\n\n- Auto-background long-running bash commands instead of killing them. Customize with BASH_DEFAULT_TIMEOUT_MS\n- Fixed a bug where Haiku was unnecessarily called in print mode\n\n## 2.0.17\n\n- Added Haiku 4.5 to model selector!\n- Haiku 4.5 automatically uses Sonnet in plan mode, and Haiku for execution (i.e. SonnetPlan by default)\n- 3P (Bedrock and Vertex) are not automatically upgraded yet. Manual upgrading can be done through setting `ANTHROPIC_DEFAULT_HAIKU_MODEL`\n- Introducing the Explore subagent. Powered by Haiku it'll search through your codebase efficiently to save context!\n- OTEL: support HTTP_PROXY and HTTPS_PROXY\n- `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC` now disables release notes fetching\n\n## 2.0.15\n\n- Fixed bug with resuming where previously created files needed to be read again before writing\n- Fixed bug with `-p` mode where @-mentioned files needed to be read again before writing\n\n## 2.0.14\n\n- Fix @-mentioning MCP servers to toggle them on/off\n- Improve permission checks for bash with inline env vars\n- Fix ultrathink + thinking toggle\n- Reduce unnecessary logins\n- Document --system-prompt\n- Several improvements to rendering\n- Plugins UI polish\n\n## 2.0.13\n\n- Fixed `/plugin` not working on native build\n\n## 2.0.12\n\n- **Plugin System Released**: Extend Claude Code with custom commands, agents, hooks, and MCP servers from marketplaces\n- `/plugin install`, `/plugin enable/disable`, `/plugin marketplace` commands for plugin management\n- Repository-level plugin configuration via `extraKnownMarketplaces` for team collaboration\n- `/plugin validate` command for validating plugin structure and configuration\n- Plugin announcement blog post at https://www.anthropic.com/news/claude-code-plugins\n- Plugin documentation available at https://docs.claude.com/en/docs/claude-code/plugins\n- Comprehensive error messages and diagnostics via `/doctor` command\n- Avoid flickering in `/model` selector\n- Improvements to `/help`\n- Avoid mentioning hooks in `/resume` summaries\n- Changes to the \"verbose\" setting in `/config` now persist across sessions\n\n## 2.0.11\n\n- Reduced system prompt size by 1.4k tokens\n- IDE: Fixed keyboard shortcuts and focus issues for smoother interaction\n- Fixed Opus fallback rate limit errors appearing incorrectly\n- Fixed /add-dir command selecting wrong default tab\n\n## 2.0.10\n\n- Rewrote terminal renderer for buttery smooth UI\n- Enable/disable MCP servers by @mentioning, or in /mcp\n- Added tab completion for shell commands in bash mode\n- PreToolUse hooks can now modify tool inputs\n- Press Ctrl-G to edit your prompt in your system's configured text editor\n- Fixes for bash permission checks with environment variables in the command\n\n## 2.0.9\n\n- Fix regression where bash backgrounding stopped working\n\n## 2.0.8\n\n- Update Bedrock default Sonnet model to `global.anthropic.claude-sonnet-4-5-20250929-v1:0`\n- IDE: Add drag-and-drop support for files and folders in chat\n- /context: Fix counting for thinking blocks\n- Improve message rendering for users with light themes on dark terminals\n- Remove deprecated .claude.json allowedTools, ignorePatterns, env, and todoFeatureEnabled config options (instead, configure these in your settings.json)\n\n## 2.0.5\n\n- IDE: Fix IME unintended message submission with Enter and Tab\n- IDE: Add \"Open in Terminal\" link in login screen\n- Fix unhandled OAuth expiration 401 API errors\n- SDK: Added SDKUserMessageReplay.isReplay to prevent duplicate messages\n\n## 2.0.1\n\n- Skip Sonnet 4.5 default model setting change for Bedrock and Vertex\n- Various bug fixes and presentation improvements\n\n## 2.0.0\n\n- New native VS Code extension\n- Fresh coat of paint throughout the whole app\n- /rewind a conversation to undo code changes\n- /usage command to see plan limits\n- Tab to toggle thinking (sticky across sessions)\n- Ctrl-R to search history\n- Unshipped claude config command\n- Hooks: Reduced PostToolUse 'tool_use' ids were found without 'tool_result' blocks errors\n- SDK: The Claude Code SDK is now the Claude Agent SDK\n- Add subagents dynamically with `--agents` flag\n\n## 1.0.126\n\n- Enable /context command for Bedrock and Vertex\n- Add mTLS support for HTTP-based OpenTelemetry exporters\n\n## 1.0.124\n\n- Set `CLAUDE_BASH_NO_LOGIN` environment variable to 1 or true to to skip login shell for BashTool\n- Fix Bedrock and Vertex environment variables evaluating all strings as truthy\n- No longer inform Claude of the list of allowed tools when permission is denied\n- Fixed security vulnerability in Bash tool permission checks\n- Improved VSCode extension performance for large files\n\n## 1.0.123\n\n- Bash permission rules now support output redirections when matching (e.g., `Bash(python:*)` matches `python script.py > output.txt`)\n- Fixed thinking mode triggering on negation phrases like \"don't think\"\n- Fixed rendering performance degradation during token streaming\n- Added SlashCommand tool, which enables Claude to invoke your slash commands. https://docs.claude.com/en/docs/claude-code/slash-commands#SlashCommand-tool\n- Enhanced BashTool environment snapshot logging\n- Fixed a bug where resuming a conversation in headless mode would sometimes enable thinking unnecessarily\n- Migrated --debug logging to a file, to enable easy tailing & filtering\n\n## 1.0.120\n\n- Fix input lag during typing, especially noticeable with large prompts\n- Improved VSCode extension command registry and sessions dialog user experience\n- Enhanced sessions dialog responsiveness and visual feedback\n- Fixed IDE compatibility issue by removing worktree support check\n- Fixed security vulnerability where Bash tool permission checks could be bypassed using prefix matching\n\n## 1.0.119\n\n- Fix Windows issue where process visually freezes on entering interactive mode\n- Support dynamic headers for MCP servers via headersHelper configuration\n- Fix thinking mode not working in headless sessions\n- Fix slash commands now properly update allowed tools instead of replacing them\n\n## 1.0.117\n\n- Add Ctrl-R history search to recall previous commands like bash/zsh\n- Fix input lag while typing, especially on Windows\n- Add sed command to auto-allowed commands in acceptEdits mode\n- Fix Windows PATH comparison to be case-insensitive for drive letters\n- Add permissions management hint to /add-dir output\n\n## 1.0.115\n\n- Improve thinking mode display with enhanced visual effects\n- Type /t to temporarily disable thinking mode in your prompt\n- Improve path validation for glob and grep tools\n- Show condensed output for post-tool hooks to reduce visual clutter\n- Fix visual feedback when loading state completes\n- Improve UI consistency for permission request dialogs\n\n## 1.0.113\n\n- Deprecated piped input in interactive mode\n- Move Ctrl+R keybinding for toggling transcript to Ctrl+O\n\n## 1.0.112\n\n- Transcript mode (Ctrl+R): Added the model used to generate each assistant message\n- Addressed issue where some Claude Max users were incorrectly recognized as Claude Pro users\n- Hooks: Added systemMessage support for SessionEnd hooks\n- Added `spinnerTipsEnabled` setting to disable spinner tips\n- IDE: Various improvements and bug fixes\n\n## 1.0.111\n\n- /model now validates provided model names\n- Fixed Bash tool crashes caused by malformed shell syntax parsing\n\n## 1.0.110\n\n- /terminal-setup command now supports WezTerm\n- MCP: OAuth tokens now proactively refresh before expiration\n- Fixed reliability issues with background Bash processes\n\n## 1.0.109\n\n- SDK: Added partial message streaming support via `--include-partial-messages` CLI flag\n\n## 1.0.106\n\n- Windows: Fixed path permission matching to consistently use POSIX format (e.g., `Read(//c/Users/...)`)\n\n## 1.0.97\n\n- Settings: /doctor now validates permission rule syntax and suggests corrections\n\n## 1.0.94\n\n- Vertex: add support for global endpoints for supported models\n- /memory command now allows direct editing of all imported memory files\n- SDK: Add custom tools as callbacks\n- Added /todos command to list current todo items\n\n## 1.0.93\n\n- Windows: Add alt + v shortcut for pasting images from clipboard\n- Support NO_PROXY environment variable to bypass proxy for specified hostnames and IPs\n\n## 1.0.90\n\n- Settings file changes take effect immediately - no restart required\n\n## 1.0.88\n\n- Fixed issue causing \"OAuth authentication is currently not supported\"\n- Status line input now includes `exceeds_200k_tokens`\n- Fixed incorrect usage tracking in /cost.\n- Introduced `ANTHROPIC_DEFAULT_SONNET_MODEL` and `ANTHROPIC_DEFAULT_OPUS_MODEL` for controlling model aliases opusplan, opus, and sonnet.\n- Bedrock: Updated default Sonnet model to Sonnet 4\n\n## 1.0.86\n\n- Added /context to help users self-serve debug context issues\n- SDK: Added UUID support for all SDK messages\n- SDK: Added `--replay-user-messages` to replay user messages back to stdout\n\n## 1.0.85\n\n- Status line input now includes session cost info\n- Hooks: Introduced SessionEnd hook\n\n## 1.0.84\n\n- Fix tool_use/tool_result id mismatch error when network is unstable\n- Fix Claude sometimes ignoring real-time steering when wrapping up a task\n- @-mention: Add ~/.claude/\\* files to suggestions for easier agent, output style, and slash command editing\n- Use built-in ripgrep by default; to opt out of this behavior, set USE_BUILTIN_RIPGREP=0\n\n## 1.0.83\n\n- @-mention: Support files with spaces in path\n- New shimmering spinner\n\n## 1.0.82\n\n- SDK: Add request cancellation support\n- SDK: New additionalDirectories option to search custom paths, improved slash command processing\n- Settings: Validation prevents invalid fields in .claude/settings.json files\n- MCP: Improve tool name consistency\n- Bash: Fix crash when Claude tries to automatically read large files\n\n## 1.0.81\n\n- Released output styles, including new built-in educational output styles \"Explanatory\" and \"Learning\". Docs: https://docs.claude.com/en/docs/claude-code/output-styles\n- Agents: Fix custom agent loading when agent files are unparsable\n\n## 1.0.80\n\n- UI improvements: Fix text contrast for custom subagent colors and spinner rendering issues\n\n## 1.0.77\n\n- Bash tool: Fix heredoc and multiline string escaping, improve stderr redirection handling\n- SDK: Add session support and permission denial tracking\n- Fix token limit errors in conversation summarization\n- Opus Plan Mode: New setting in `/model` to run Opus only in plan mode, Sonnet otherwise\n\n## 1.0.73\n\n- MCP: Support multiple config files with `--mcp-config file1.json file2.json`\n- MCP: Press Esc to cancel OAuth authentication flows\n- Bash: Improved command validation and reduced false security warnings\n- UI: Enhanced spinner animations and status line visual hierarchy\n- Linux: Added support for Alpine and musl-based distributions (requires separate ripgrep installation)\n\n## 1.0.72\n\n- Ask permissions: have Claude Code always ask for confirmation to use specific tools with /permissions\n\n## 1.0.71\n\n- Background commands: (Ctrl-b) to run any Bash command in the background so Claude can keep working (great for dev servers, tailing logs, etc.)\n- Customizable status line: add your terminal prompt to Claude Code with /statusline\n\n## 1.0.70\n\n- Performance: Optimized message rendering for better performance with large contexts\n- Windows: Fixed native file search, ripgrep, and subagent functionality\n- Added support for @-mentions in slash command arguments\n\n## 1.0.69\n\n- Upgraded Opus to version 4.1\n\n## 1.0.68\n\n- Fix incorrect model names being used for certain commands like `/pr-comments`\n- Windows: improve permissions checks for allow / deny tools and project trust. This may create a new project entry in `.claude.json` - manually merge the history field if desired.\n- Windows: improve sub-process spawning to eliminate \"No such file or directory\" when running commands like pnpm\n- Enhanced /doctor command with CLAUDE.md and MCP tool context for self-serve debugging\n- SDK: Added canUseTool callback support for tool confirmation\n- Added `disableAllHooks` setting\n- Improved file suggestions performance in large repos\n\n## 1.0.65\n\n- IDE: Fixed connection stability issues and error handling for diagnostics\n- Windows: Fixed shell environment setup for users without .bashrc files\n\n## 1.0.64\n\n- Agents: Added model customization support - you can now specify which model an agent should use\n- Agents: Fixed unintended access to the recursive agent tool\n- Hooks: Added systemMessage field to hook JSON output for displaying warnings and context\n- SDK: Fixed user input tracking across multi-turn conversations\n- Added hidden files to file search and @-mention suggestions\n\n## 1.0.63\n\n- Windows: Fixed file search, @agent mentions, and custom slash commands functionality\n\n## 1.0.62\n\n- Added @-mention support with typeahead for custom agents. @<your-custom-agent> to invoke it\n- Hooks: Added SessionStart hook for new session initialization\n- /add-dir command now supports typeahead for directory paths\n- Improved network connectivity check reliability\n\n## 1.0.61\n\n- Transcript mode (Ctrl+R): Changed Esc to exit transcript mode rather than interrupt\n- Settings: Added `--settings` flag to load settings from a JSON file\n- Settings: Fixed resolution of settings files paths that are symlinks\n- OTEL: Fixed reporting of wrong organization after authentication changes\n- Slash commands: Fixed permissions checking for allowed-tools with Bash\n- IDE: Added support for pasting images in VSCode MacOS using ⌘+V\n- IDE: Added `CLAUDE_CODE_AUTO_CONNECT_IDE=false` for disabling IDE auto-connection\n- Added `CLAUDE_CODE_SHELL_PREFIX` for wrapping Claude and user-provided shell commands run by Claude Code\n\n## 1.0.60\n\n- You can now create custom subagents for specialized tasks! Run /agents to get started\n\n## 1.0.59\n\n- SDK: Added tool confirmation support with canUseTool callback\n- SDK: Allow specifying env for spawned process\n- Hooks: Exposed PermissionDecision to hooks (including \"ask\")\n- Hooks: UserPromptSubmit now supports additionalContext in advanced JSON output\n- Fixed issue where some Max users that specified Opus would still see fallback to Sonnet\n\n## 1.0.58\n\n- Added support for reading PDFs\n- MCP: Improved server health status display in 'claude mcp list'\n- Hooks: Added CLAUDE_PROJECT_DIR env var for hook commands\n\n## 1.0.57\n\n- Added support for specifying a model in slash commands\n- Improved permission messages to help Claude understand allowed tools\n- Fix: Remove trailing newlines from bash output in terminal wrapping\n\n## 1.0.56\n\n- Windows: Enabled shift+tab for mode switching on versions of Node.js that support terminal VT mode\n- Fixes for WSL IDE detection\n- Fix an issue causing awsRefreshHelper changes to .aws directory not to be picked up\n\n## 1.0.55\n\n- Clarified knowledge cutoff for Opus 4 and Sonnet 4 models\n- Windows: fixed Ctrl+Z crash\n- SDK: Added ability to capture error logging\n- Add --system-prompt-file option to override system prompt in print mode\n\n## 1.0.54\n\n- Hooks: Added UserPromptSubmit hook and the current working directory to hook inputs\n- Custom slash commands: Added argument-hint to frontmatter\n- Windows: OAuth uses port 45454 and properly constructs browser URL\n- Windows: mode switching now uses alt + m, and plan mode renders properly\n- Shell: Switch to in-memory shell snapshot to fix file-related errors\n\n## 1.0.53\n\n- Updated @-mention file truncation from 100 lines to 2000 lines\n- Add helper script settings for AWS token refresh: awsAuthRefresh (for foreground operations like aws sso login) and awsCredentialExport (for background operation with STS-like response).\n\n## 1.0.52\n\n- Added support for MCP server instructions\n\n## 1.0.51\n\n- Added support for native Windows (requires Git for Windows)\n- Added support for Bedrock API keys through environment variable AWS_BEARER_TOKEN_BEDROCK\n- Settings: /doctor can now help you identify and fix invalid setting files\n- `--append-system-prompt` can now be used in interactive mode, not just --print/-p.\n- Increased auto-compact warning threshold from 60% to 80%\n- Fixed an issue with handling user directories with spaces for shell snapshots\n- OTEL resource now includes os.type, os.version, host.arch, and wsl.version (if running on Windows Subsystem for Linux)\n- Custom slash commands: Fixed user-level commands in subdirectories\n- Plan mode: Fixed issue where rejected plan from sub-task would get discarded\n\n## 1.0.48\n\n- Fixed a bug in v1.0.45 where the app would sometimes freeze on launch\n- Added progress messages to Bash tool based on the last 5 lines of command output\n- Added expanding variables support for MCP server configuration\n- Moved shell snapshots from /tmp to ~/.claude for more reliable Bash tool calls\n- Improved IDE extension path handling when Claude Code runs in WSL\n- Hooks: Added a PreCompact hook\n- Vim mode: Added c, f/F, t/T\n\n## 1.0.45\n\n- Redesigned Search (Grep) tool with new tool input parameters and features\n- Disabled IDE diffs for notebook files, fixing \"Timeout waiting after 1000ms\" error\n- Fixed config file corruption issue by enforcing atomic writes\n- Updated prompt input undo to Ctrl+\\_ to avoid breaking existing Ctrl+U behavior, matching zsh's undo shortcut\n- Stop Hooks: Fixed transcript path after /clear and fixed triggering when loop ends with tool call\n- Custom slash commands: Restored namespacing in command names based on subdirectories. For example, .claude/commands/frontend/component.md is now /frontend:component, not /component.\n\n## 1.0.44\n\n- New /export command lets you quickly export a conversation for sharing\n- MCP: resource_link tool results are now supported\n- MCP: tool annotations and tool titles now display in /mcp view\n- Changed Ctrl+Z to suspend Claude Code. Resume by running `fg`. Prompt input undo is now Ctrl+U.\n\n## 1.0.43\n\n- Fixed a bug where the theme selector was saving excessively\n- Hooks: Added EPIPE system error handling\n\n## 1.0.42\n\n- Added tilde (`~`) expansion support to `/add-dir` command\n\n## 1.0.41\n\n- Hooks: Split Stop hook triggering into Stop and SubagentStop\n- Hooks: Enabled optional timeout configuration for each command\n- Hooks: Added \"hook_event_name\" to hook input\n- Fixed a bug where MCP tools would display twice in tool list\n- New tool parameters JSON for Bash tool in `tool_decision` event\n\n## 1.0.40\n\n- Fixed a bug causing API connection errors with UNABLE_TO_GET_ISSUER_CERT_LOCALLY if `NODE_EXTRA_CA_CERTS` was set\n\n## 1.0.39\n\n- New Active Time metric in OpenTelemetry logging\n\n## 1.0.38\n\n- Released hooks. Special thanks to community input in https://github.com/anthropics/claude-code/issues/712. Docs: https://docs.claude.com/en/docs/claude-code/hooks\n\n## 1.0.37\n\n- Remove ability to set `Proxy-Authorization` header via ANTHROPIC_AUTH_TOKEN or apiKeyHelper\n\n## 1.0.36\n\n- Web search now takes today's date into context\n- Fixed a bug where stdio MCP servers were not terminating properly on exit\n\n## 1.0.35\n\n- Added support for MCP OAuth Authorization Server discovery\n\n## 1.0.34\n\n- Fixed a memory leak causing a MaxListenersExceededWarning message to appear\n\n## 1.0.33\n\n- Improved logging functionality with session ID support\n- Added prompt input undo functionality (Ctrl+Z and vim 'u' command)\n- Improvements to plan mode\n\n## 1.0.32\n\n- Updated loopback config for litellm\n- Added forceLoginMethod setting to bypass login selection screen\n\n## 1.0.31\n\n- Fixed a bug where ~/.claude.json would get reset when file contained invalid JSON\n\n## 1.0.30\n\n- Custom slash commands: Run bash output, @-mention files, enable thinking with thinking keywords\n- Improved file path autocomplete with filename matching\n- Added timestamps in Ctrl-r mode and fixed Ctrl-c handling\n- Enhanced jq regex support for complex filters with pipes and select\n\n## 1.0.29\n\n- Improved CJK character support in cursor navigation and rendering\n\n## 1.0.28\n\n- Slash commands: Fix selector display during history navigation\n- Resizes images before upload to prevent API size limit errors\n- Added XDG_CONFIG_HOME support to configuration directory\n- Performance optimizations for memory usage\n- New attributes (terminal.type, language) in OpenTelemetry logging\n\n## 1.0.27\n\n- Streamable HTTP MCP servers are now supported\n- Remote MCP servers (SSE and HTTP) now support OAuth\n- MCP resources can now be @-mentioned\n- /resume slash command to switch conversations within Claude Code\n\n## 1.0.25\n\n- Slash commands: moved \"project\" and \"user\" prefixes to descriptions\n- Slash commands: improved reliability for command discovery\n- Improved support for Ghostty\n- Improved web search reliability\n\n## 1.0.24\n\n- Improved /mcp output\n- Fixed a bug where settings arrays got overwritten instead of merged\n\n## 1.0.23\n\n- Released TypeScript SDK: import @anthropic-ai/claude-code to get started\n- Released Python SDK: pip install claude-code-sdk to get started\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
+  "changelogLastFetched": 1760902404357,
+  "feedbackSurveyState": {
+    "lastShownTime": 1760892283267
+  },
+  "lastReleaseNotesSeen": "2.0.22",
+  "oauthAccount": {
+    "accountUuid": "4f0cb297-5fb9-4a09-941d-a93f4ea18ea2",
+    "emailAddress": "rob.taylor@chipflow.io",
+    "organizationUuid": "24801e38-a985-47a1-8ba0-c5c7ca6d75c5",
+    "displayName": "Rob",
+    "organizationBillingType": "stripe_subscription",
+    "organizationRole": "admin",
+    "workspaceRole": null,
+    "organizationName": "rob.taylor@chipflow.io's Organization"
+  },
+  "claudeCodeFirstTokenDate": "2025-03-13T17:50:48.825436Z",
+  "iterm2SetupInProgress": false,
+  "iterm2BackupPath": "/Users/roberttaylor/Library/Preferences/com.googlecode.iterm2.plist.bak",
+  "shiftEnterKeyBindingInstalled": true,
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "2.0.21",
+  "hasOpusPlanDefault": false,
+  "s1mAccessCache": {
+    "24801e38-a985-47a1-8ba0-c5c7ca6d75c5": {
+      "hasAccess": false,
+      "hasAccessNotAsDefault": false,
+      "timestamp": 1760901206391
+    }
+  },
+  "isQualifiedForDataSharing": false
+}
