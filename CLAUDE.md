@@ -78,7 +78,9 @@ When cleaning up a PR before final review, use this approach:
 - Check PR status: `gh pr check`
 - Wait for PR checks: `gh pr check --watch`
 - Use `actionlint` to syntax check github action yml files (installed via homebrew)
-- zshell command 'gh-look' can be used to watch for last github action run
+- my custom zshell command 'gh-look' can be used to watch for last github action run
+- you can use `gh run rerun` rather than empty commits to re run a workflow
+- Alway use rebase when merging a PR
 
 ## further Python guidelines
 - Prefer pathlib over using os.path
@@ -158,3 +160,6 @@ When cleaning up a PR before final review, use this approach:
 - Collection: "claude_memories"
 - Archives: ~/.claude-mem/archives/
 <!-- /CLAUDE-MEM QUICK REFERENCE -->
+- Remember to always run lint before committing
+- Remember configurator docs/DEPLOYMENT_ARCHITECTURE.md
+- please stop saying 'Perfect!'
