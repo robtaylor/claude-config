@@ -1,0 +1,3 @@
+[submodule "skills/excalidraw-diagrams"]
+	path = skills/excalidraw-diagrams
+	url = https://github.com/robtaylor/excalidraw-diagrams.git

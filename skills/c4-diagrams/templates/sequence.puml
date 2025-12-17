@@ -1,0 +1,37 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Sequence.puml
+HIDE_STEREOTYPE()
+
+title [Diagram Title]
+
+' SEQUENCE DIAGRAM CONSTRAINTS:
+' ❌ NO boundaries (System_Boundary, Container_Boundary) - use flat list only
+' ❌ NO _Ext suffixes (System_Ext, Container_Ext) - use regular variants
+' ✅ Participants must be declared flat (no nesting)
+' ✅ Relationships are time-ordered from top to bottom
+
+' Example participants (flat list, no boundaries):
+' Person(user, "User", "A user of the system")
+' Container(api, "API Server", "Node.js", "Handles requests")
+' ContainerDb(database, "Database", "PostgreSQL", "Stores data")
+' Container(cache, "Redis Cache", "Redis", "Caches responses")
+
+' Example time-ordered relationships:
+' Rel(user, api, "Makes API request", "HTTPS")
+' Rel(api, cache, "Checks cache", "Redis Protocol")
+' Rel(api, database, "Queries data", "SQL")
+' Rel(api, user, "Returns response", "JSON")
+
+' Optional: Use dividers to mark logical steps
+' == Authentication Step ==
+
+' Optional: Use groups for sub-processes
+' group Login Process
+'   Rel(user, api, "Submits credentials", "HTTPS")
+'   Rel(api, database, "Verifies user", "SQL")
+' end
+
+' Optional: Show element descriptions in the diagram
+' SHOW_ELEMENT_DESCRIPTIONS()
+
+@enduml

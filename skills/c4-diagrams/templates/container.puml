@@ -1,0 +1,12 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+HIDE_STEREOTYPE()
+
+title [Diagram Title]
+
+' Add containers to your diagram, for example:
+' Container(web_app, "Web Application", "React", "The main web interface")
+' ContainerDb(database, "Database", "PostgreSQL", "Stores user data")
+' Rel(web_app, database, "Reads/writes")
+
+@enduml

@@ -1,41 +1,12 @@
 {
-  "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/roberttaylor/.claude-mem/hooks/stop.js",
-            "timeout": 60
-          }
-        ]
-      }
-    ],
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/roberttaylor/.claude-mem/hooks/user-prompt-submit.js",
-            "timeout": 60
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/roberttaylor/.claude-mem/hooks/post-tool-use.js",
-            "timeout": 180
-          }
-        ]
-      }
-    ]
+  "hooks": {},
+  "enabledPlugins": {
+    "pr-review-toolkit@claude-code-plugins": true,
+    "code-refactoring@claude-code-workflows": true,
+    "context-management@claude-code-workflows": true,
+    "visual-documentation-skills@mhattingpete-claude-skills": true
   },
-  "alwaysThinkingEnabled": false,
+  "alwaysThinkingEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1757592786790
   }

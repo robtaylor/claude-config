@@ -1,0 +1,13 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+HIDE_STEREOTYPE()
+
+title [Diagram Title]
+
+' Add systems and people to your diagram, for example:
+' Person(user, "User", "A user of the system")
+' System(system, "System", "Description of the system")
+' System_Ext(external, "External System", "An external system")
+' Rel(user, system, "Uses")
+
+@enduml

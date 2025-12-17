@@ -3,10 +3,11 @@
 # General behaviour
 - **Do not always agree with me**: If I state something that you belive is incorrect, please say so and provide a demonstration of why it is incorrect.
 - **Commit often**: Commit to git after each cohesive change and push often
-- **Scripts**: in general don't make scripts executable, run them with the appropriate environment manager. PDM for Python, npm for js/ts, etc.
+- **Scripts**: in general don't make scripts executable, run them with the appropriate environment manager. PDM or UV for Python, npm for js/ts, etc, unless they are bash, require no environment setup or have a suitable shebang that executes them in the correct environment (e.g. #!/usr/bin/env -S uv run --script)
 - Do not say "You're absolutely right". Rather than assume the user is always correct, you should sanity check requests from the user
 - Do not be confident that you have solved an issue. Always test that you have.
 - Always make any infrastructure configuration or setup scripts idempotent if possible.
+- Don't be sure of your conclusions without confirming them
 
 ## Build Commands
 - **Build all servers**: `npm run build`
@@ -30,9 +31,10 @@
 - **No whitespace on blank lines** in any files
 
 ## Python Dependencies
-- Most Python projects use `uv` for dependency management
+- Use `uv` for dependency and python environment management. If a project has a pyproject.toml, you can determine which environment manager to use by looking for 'pdm', 'poetry' or 'uv' specific keys. if there are no manager specific keys, default to `uv`
+- For projects that still use requirements.txt, use `uv` for installing an enviroment for that project.
 - Some may use PDM - use `pdm install` to set up
-- Run scripts with `pdm run script_name` or `uv run script_name`
+- Run scripts with the package manager - e.g `uv run`, `pdm run`, `poetry run`
 
 ## Project Organization
 - Servers organized in `src/` directory
@@ -84,7 +86,7 @@ When cleaning up a PR before final review, use this approach:
 
 ## further Python guidelines
 - Prefer pathlib over using os.path
-- If there is a 'pdm lint' command, use this before finishing or committing
+- If there is a 'lint', 'test' or similar command configured in pyproject.toml, use this before finishing or committing
 - When writing tests for a library, use public apis unless instructed otherwise. command line interfaces count as public api.
 
 ## PDM usage
@@ -135,31 +137,47 @@ When cleaning up a PR before final review, use this approach:
 3. **Cross-platform testing**: Verify fixes work on Linux, macOS, and Windows
 4. **Use proper CMake patterns**: Prefer target-based configurations over global settings
 
-<!-- CLAUDE-MEM QUICK REFERENCE -->
-## 🧠 Memory System Quick Reference
+# Python Package Management with uv
 
-### Search Your Memories (SIMPLE & POWERFUL)
-- **Semantic search is king**: `mcp__claude-mem__chroma_query_documents(["search terms"])`
-- **🔒 ALWAYS include project name in query**: `["claude-mem feature authentication"]` not just `["feature authentication"]`
-- **Include dates for temporal search**: `["project-name 2025-09-09 bug fix"]` finds memories from that date
-- **Get specific memory**: `mcp__claude-mem__chroma_get_documents(ids: ["document_id"])`
+Use uv exclusively for Python package management in this project.
 
-### Search Tips That Actually Work
-- **Project isolation**: Always prefix queries with project name to avoid cross-contamination
-- **Temporal search**: Include dates (YYYY-MM-DD) in query text to find memories from specific times
-- **Intent-based**: "implementing oauth" > "oauth implementation code function"
-- **Multiple queries**: Search with different phrasings for better coverage
-- **Session-specific**: Include session ID in query when you know it
+## Package Management Commands
 
-### What Doesn't Work (Don't Do This!)
-- ❌ Complex where filters with $and/$or - they cause errors
-- ❌ Timestamp comparisons ($gte/$lt) - Chroma stores timestamps as strings
-- ❌ Mixing project filters in where clause - causes "Error finding id"
+- All Python dependencies **must be installed, synchronized, and locked** using uv
+- Never use pip, pip-tools, poetry, or conda directly for dependency management
 
-### Storage
-- Collection: "claude_memories"
-- Archives: ~/.claude-mem/archives/
-<!-- /CLAUDE-MEM QUICK REFERENCE -->
-- Remember to always run lint before committing
-- Remember configurator docs/DEPLOYMENT_ARCHITECTURE.md
-- please stop saying 'Perfect!'
+Use these commands:
+
+- Install dependencies: `uv add <package>`
+- Remove dependencies: `uv remove <package>`
+- Sync dependencies: `uv sync`
+
+## Running Python Code
+
+- Run a Python script with `uv run <script-name>.py`
+- Run Python tools like Pytest with `uv run pytest` or `uv run ruff`
+- Launch a Python repl with `uv run python`
+
+## Managing Scripts with PEP 723 Inline Metadata
+
+- Run a Python script with inline metadata (dependencies defined at the top of the file) with: `uv run script.py`
+- You can add or remove dependencies manually from the `dependencies =` section at the top of the script, or
+- Or using uv CLI:
+    - `uv add package-name --script script.py`
+    - `uv remove package-name --script script.py`
+
+## uv with docker
+- When building containers with docker for a uv based project, follow https://docs.astral.sh/uv/guides/integration/docker/
+- If you need a specific python version, use uv to install, beung sure to mount the cache
+
+# Docker & Container Patterns
+When using Docker, it's essential to follow best practices for containerization and orchestration. Here are some key points to consider:
+
+* Multi-stage Builds: Use multi-stage builds to optimize Docker images by reducing the size and complexity of the image layers. 
+* Container Optimization: Optimize Docker images for performance and resource efficiency by removing unnecessary layers and dependencies. 
+* Docker Compose Orchestration: Use Docker Compose to manage multiple containers and their dependencies easily. 
+* Security Best Practices: Implement security measures such as non-root execution, read-only filesystems, and vulnerability scanning to protect your containerized environment. 
+* Production-Ready Workflows: Ensure your containerized workflows are production-ready by testing and validating them thoroughly before deployment. 
+
+By adhering to these best practices, you can create a secure and efficient containerized environment for using Claude Code, enhancing your development workflow and ensuring the safety of your projects.
+

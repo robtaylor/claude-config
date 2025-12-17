@@ -1,0 +1,12 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+HIDE_STEREOTYPE()
+
+title [Diagram Title]
+
+' Add components to your diagram, for example:
+' Component(controller, "Controller", "Spring MVC", "Handles HTTP requests")
+' Component(service, "Service", "Spring Service", "Business logic")
+' Rel(controller, service, "Uses")
+
+@enduml
