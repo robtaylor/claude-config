@@ -1,0 +1,49 @@
+{
+  "version": 2,
+  "plugins": {
+    "pr-review-toolkit@claude-code-plugins": [
+      {
+        "scope": "user",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/claude-code-plugins/pr-review-toolkit/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2025-12-03T17:42:17.678Z",
+        "lastUpdated": "2025-12-03T17:42:17.678Z",
+        "gitCommitSha": "4928f2cdcac40e7e684f5102e3818513e70eb8a1",
+        "isLocal": true
+      }
+    ],
+    "code-refactoring@claude-code-workflows": [
+      {
+        "scope": "user",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/claude-code-workflows/code-refactoring/ddbd034ca35c",
+        "version": "ddbd034ca35c",
+        "installedAt": "2025-12-03T17:42:17.678Z",
+        "lastUpdated": "2025-12-03T17:42:17.678Z",
+        "gitCommitSha": "ddbd034ca35c6e76af6e54891d83a646e7837b1c",
+        "isLocal": true
+      }
+    ],
+    "context-management@claude-code-workflows": [
+      {
+        "scope": "user",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/claude-code-workflows/context-management/ddbd034ca35c",
+        "version": "ddbd034ca35c",
+        "installedAt": "2025-12-03T17:42:17.678Z",
+        "lastUpdated": "2025-12-03T17:42:17.678Z",
+        "gitCommitSha": "ddbd034ca35c6e76af6e54891d83a646e7837b1c",
+        "isLocal": true
+      }
+    ],
+    "visual-documentation-skills@mhattingpete-claude-skills": [
+      {
+        "scope": "user",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/mhattingpete-claude-skills/visual-documentation-skills/1.1.0",
+        "version": "1.1.0",
+        "installedAt": "2025-12-03T17:42:17.678Z",
+        "lastUpdated": "2025-12-03T17:42:17.678Z",
+        "gitCommitSha": "80ac0f58a6b258e1b5d86945eae0fb474c452918",
+        "isLocal": true
+      }
+    ]
+  }
+}
