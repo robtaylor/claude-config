@@ -1,17 +1,19 @@
 ---
 name: google-docs
-description: Manage Google Docs with full document operations including reading content, inserting/appending text, find and replace, text formatting (bold, italic, underline), page breaks, document structure, and document creation. Use for document content operations, text insertion/replacement, formatting, structured document generation, and content extraction. This skill should be used for ALL Google Docs-related requests.
+description: Manage Google Docs and Google Drive with full document operations and file management. Includes document reading, editing, formatting, and Drive operations (upload, download, share, search). Use for document content operations, Drive file management, and integration with other Google services.
 category: productivity
-version: 1.0.0
-key_capabilities: read content, insert/append/replace text, format text, page breaks, structured document creation
-when_to_use: Document content operations, text insertion/replacement, formatting, structured document generation, content extraction
+version: 1.1.0
+key_capabilities: read content, insert/append/replace text, format text, Drive upload/download/share/search
+when_to_use: Document content operations, text insertion/replacement, formatting, Drive file management, sharing files
 ---
 
-# Google Docs Management Skill
+# Google Docs & Drive Management Skill
 
 ## Purpose
 
-Manage Google Docs documents with comprehensive operations:
+Manage Google Docs documents and Google Drive files with comprehensive operations:
+
+**Google Docs:**
 - Read document content and structure
 - Insert and append text
 - Find and replace text
@@ -22,7 +24,16 @@ Manage Google Docs documents with comprehensive operations:
 - Get document structure (headings)
 - Insert inline images from URLs
 
-**Integration**: Works seamlessly with google-drive skill for file creation and management
+**Google Drive:**
+- Upload files to Drive
+- Download files from Drive
+- Search and list files
+- Share files with users or publicly
+- Create folders
+- Move, copy, and delete files
+- Get file metadata
+
+**Integration**: The drive_manager.rb script shares OAuth credentials with docs_manager.rb
 
 **📚 Additional Resources**:
 - See `references/integration-patterns.md` for complete workflow examples
@@ -41,15 +52,15 @@ Use this skill when:
 - Keywords: "Google Doc", "document", "edit doc", "format text", "insert text"
 
 **📋 Discovering Your Documents**:
-To list or search for documents, use the google-drive skill:
+To list or search for documents, use drive_manager.rb:
 ```bash
 # List recent documents
-~/.claude/skills/google-drive/scripts/drive_manager.rb search \
+scripts/drive_manager.rb search \
   --query "mimeType='application/vnd.google-apps.document'" \
   --max-results 50
 
 # Search by name
-~/.claude/skills/google-drive/scripts/drive_manager.rb search \
+scripts/drive_manager.rb search \
   --query "name contains 'Report' and mimeType='application/vnd.google-apps.document'"
 ```
 
@@ -91,7 +102,7 @@ echo '{
 
 **Document ID**:
 - Returned in response for future operations
-- Use with google-drive skill for sharing/organizing
+- Use with drive_manager.rb for sharing/organizing
 
 ### 3. Insert and Append Text
 
@@ -248,6 +259,12 @@ echo '{
 - SVG is NOT supported - convert to PNG first
 - For private images, upload to GCS and make public, or use signed URLs
 
+**Sizing Tips**:
+- To fit page width with default margins: use `width: 468` (points)
+- Specifying only width will auto-scale height proportionally
+- Specifying only height will auto-scale width proportionally
+- 1 inch = 72 points
+
 ## Natural Language Examples
 
 ### User Says: "Read the content of this Google Doc: abc123"
@@ -315,9 +332,126 @@ Index 13: "S" (start of "Second")
 Index 29: end of document
 ```
 
-## Integration with Google Drive Skill
+## Google Drive Operations
 
-**Create and Organize Workflow**:
+The `drive_manager.rb` script provides comprehensive Google Drive file management.
+
+### Upload Files
+
+```bash
+# Upload a file to Drive root
+scripts/drive_manager.rb upload --file ./document.pdf
+
+# Upload to specific folder
+scripts/drive_manager.rb upload --file ./diagram.excalidraw --folder-id abc123
+
+# Upload with custom name
+scripts/drive_manager.rb upload --file ./local.txt --name "Remote Name.txt"
+```
+
+### Download Files
+
+```bash
+# Download a file
+scripts/drive_manager.rb download --file-id abc123 --output ./local_copy.pdf
+
+# Export Google Doc as PDF
+scripts/drive_manager.rb download --file-id abc123 --output ./doc.pdf --export-as pdf
+
+# Export Google Sheet as CSV
+scripts/drive_manager.rb download --file-id abc123 --output ./data.csv --export-as csv
+```
+
+### Search and List Files
+
+```bash
+# List recent files
+scripts/drive_manager.rb list --max-results 20
+
+# Search by name
+scripts/drive_manager.rb search --query "name contains 'Report'"
+
+# Search by type
+scripts/drive_manager.rb search --query "mimeType='application/vnd.google-apps.document'"
+
+# Search in folder
+scripts/drive_manager.rb search --query "'folder_id' in parents"
+
+# Combine queries
+scripts/drive_manager.rb search --query "name contains '.excalidraw' and modifiedTime > '2024-01-01'"
+```
+
+### Share Files
+
+```bash
+# Share with specific user (reader)
+scripts/drive_manager.rb share --file-id abc123 --email user@example.com --role reader
+
+# Share with write access
+scripts/drive_manager.rb share --file-id abc123 --email user@example.com --role writer
+
+# Make publicly accessible (anyone with link)
+scripts/drive_manager.rb share --file-id abc123 --type anyone --role reader
+
+# Share with entire domain
+scripts/drive_manager.rb share --file-id abc123 --type domain --domain example.com --role reader
+```
+
+### Folder Management
+
+```bash
+# Create a folder
+scripts/drive_manager.rb create-folder --name "Project Documents"
+
+# Create folder inside another folder
+scripts/drive_manager.rb create-folder --name "Diagrams" --parent-id abc123
+
+# Move file to folder
+scripts/drive_manager.rb move --file-id file123 --folder-id folder456
+```
+
+### Other Operations
+
+```bash
+# Get file metadata
+scripts/drive_manager.rb get-metadata --file-id abc123
+
+# Copy a file
+scripts/drive_manager.rb copy --file-id abc123 --name "Copy of Document"
+
+# Update file content (replace)
+scripts/drive_manager.rb update --file-id abc123 --file ./new_content.pdf
+
+# Delete file (moves to trash)
+scripts/drive_manager.rb delete --file-id abc123
+```
+
+### Output Format
+
+All commands return JSON with consistent structure:
+```json
+{
+  "status": "success",
+  "operation": "upload",
+  "file": {
+    "id": "1abc...",
+    "name": "document.pdf",
+    "mime_type": "application/pdf",
+    "web_view_link": "https://drive.google.com/file/d/1abc.../view",
+    "web_content_link": "https://drive.google.com/uc?id=1abc...",
+    "created_time": "2024-01-15T10:30:00Z",
+    "modified_time": "2024-01-15T10:30:00Z",
+    "size": 12345
+  }
+}
+```
+
+---
+
+## Integration Workflows
+
+### Create and Organize Documents
+
 ```bash
 # Step 1: Create document (returns document_id)
 echo '{"title":"Report"}' | scripts/docs_manager.rb create
@@ -326,26 +460,25 @@ echo '{"title":"Report"}' | scripts/docs_manager.rb create
 # Step 2: Add content
 echo '{"document_id":"abc123","text":"# Report\n\nContent here"}' | scripts/docs_manager.rb insert
 
-# Step 3: Use google-drive to organize
-~/.claude/skills/google-drive/scripts/drive_manager.rb --operation move \
-  --file-id abc123 \
-  --parent-id [folder_id]
+# Step 3: Organize in folder
+scripts/drive_manager.rb move --file-id abc123 --folder-id [folder_id]
 
 # Step 4: Share with team
-~/.claude/skills/google-drive/scripts/drive_manager.rb --operation share \
-  --file-id abc123 \
-  --email team@company.com \
-  --role writer
+scripts/drive_manager.rb share --file-id abc123 --email team@company.com --role writer
 ```
 
-**Export to PDF**:
+### Export Document to PDF
+
 ```bash
-# Use google-drive skill to export doc as PDF
-~/.claude/skills/google-drive/scripts/drive_manager.rb --operation export \
-  --file-id abc123 \
-  --mime-type "application/pdf" \
-  --output report.pdf
+scripts/drive_manager.rb download --file-id abc123 --output ./report.pdf --export-as pdf
 ```
+
+### Excalidraw Diagrams Workflow
+
+For creating and managing Excalidraw diagrams, see the `excalidraw-diagrams` skill which integrates with drive_manager.rb for:
+- Uploading .excalidraw files to Drive
+- Getting shareable edit URLs for Excalidraw web
+- Round-trip editing between AI and human
 
 ## Authentication Setup
 
@@ -414,7 +547,7 @@ echo '{"document_id":"abc123","text":"# Report\n\nContent here"}' | scripts/docs
 - Common document operations
 - Workflow examples
 - Index calculation examples
-- Integration with google-drive
+- Integration with drive_manager.rb for file operations
 
 ## Error Handling
 
@@ -464,7 +597,7 @@ echo '{"document_id":"abc123","text":"# Report\n\nContent here"}' | scripts/docs
 1. Always provide meaningful title
 2. Add initial content when creating for better context
 3. Save returned document_id for future operations
-4. Use google-drive skill to organize and share
+4. Use drive_manager.rb to organize and share
 
 ### Text Insertion
 1. Read document first to understand current structure
@@ -573,16 +706,14 @@ echo '{"document_id":"abc123","image_url":"https://example.com/image.png","width
    }' | scripts/docs_manager.rb format
    ```
 
-5. **Share via google-drive**:
+5. **Share with team**:
    ```bash
-   ~/.claude/skills/google-drive/scripts/drive_manager.rb --operation share \
-     --file-id abc123 \
-     --email team@company.com \
-     --role writer
+   scripts/drive_manager.rb share --file-id abc123 --email team@company.com --role writer
    ```
 
 ## Version History
 
+- **1.1.0** (2025-12-20) - Added Google Drive operations via drive_manager.rb: upload, download, search, list, share, move, copy, delete, folder management. Integrated with excalidraw-diagrams skill for diagram workflows.
 - **1.0.0** (2025-11-10) - Initial Google Docs skill with full document operations: read, create, insert, append, replace, format, page breaks, structure analysis. Shared OAuth token with email, calendar, contacts, drive, and sheets skills.
 
 ---
