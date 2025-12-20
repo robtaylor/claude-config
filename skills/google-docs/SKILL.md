@@ -20,6 +20,7 @@ Manage Google Docs documents with comprehensive operations:
 - Create new documents
 - Delete content ranges
 - Get document structure (headings)
+- Insert inline images from URLs
 
 **Integration**: Works seamlessly with google-drive skill for file creation and management
 
@@ -211,6 +212,41 @@ echo '{
   "end_index": 500
 }' | scripts/docs_manager.rb delete
 ```
+
+### 8. Insert Images
+
+**Insert image from URL**:
+```bash
+echo '{
+  "document_id": "abc123",
+  "image_url": "https://storage.googleapis.com/bucket/image.png"
+}' | scripts/docs_manager.rb insert-image
+```
+
+**Insert image with specific size**:
+```bash
+echo '{
+  "document_id": "abc123",
+  "image_url": "https://storage.googleapis.com/bucket/image.png",
+  "width": 400,
+  "height": 300
+}' | scripts/docs_manager.rb insert-image
+```
+
+**Insert image at specific position**:
+```bash
+echo '{
+  "document_id": "abc123",
+  "image_url": "https://storage.googleapis.com/bucket/image.png",
+  "index": 100
+}' | scripts/docs_manager.rb insert-image
+```
+
+**Image URL Requirements**:
+- URL must be publicly accessible (Google Docs fetches the image)
+- Supported formats: PNG, JPEG, GIF
+- SVG is NOT supported - convert to PNG first
+- For private images, upload to GCS and make public, or use signed URLs
 
 ## Natural Language Examples
 
@@ -490,6 +526,16 @@ echo '{"document_id":"abc123","start_index":1,"end_index":50,"bold":true}' | scr
 **Get document structure**:
 ```bash
 scripts/docs_manager.rb structure <document_id>
+```
+
+**Insert image from URL**:
+```bash
+echo '{"document_id":"abc123","image_url":"https://example.com/image.png"}' | scripts/docs_manager.rb insert-image
+```
+
+**Insert image with size**:
+```bash
+echo '{"document_id":"abc123","image_url":"https://example.com/image.png","width":400,"height":300}' | scripts/docs_manager.rb insert-image
 ```
 
 ## Example Workflow: Creating and Editing a Report

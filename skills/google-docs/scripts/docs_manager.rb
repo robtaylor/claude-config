@@ -419,6 +419,64 @@ class DocsManager
     exit EXIT_OPERATION_FAILED
   end
 
+  # Insert inline image from URL
+  def insert_image(document_id:, image_url:, index: nil, width: nil, height: nil)
+    # If no index provided, append to end
+    if index.nil?
+      document = @docs_service.get_document(document_id)
+      index = document.body.content.last.end_index - 1
+    end
+
+    # Build the image properties
+    object_size = {}
+    object_size[:width] = { magnitude: width, unit: 'PT' } if width
+    object_size[:height] = { magnitude: height, unit: 'PT' } if height
+
+    insert_request = {
+      insert_inline_image: {
+        location: { index: index },
+        uri: image_url
+      }
+    }
+
+    # Add size if specified
+    unless object_size.empty?
+      insert_request[:insert_inline_image][:object_size] = object_size
+    end
+
+    requests = [insert_request]
+
+    result = @docs_service.batch_update_document(
+      document_id,
+      Google::Apis::DocsV1::BatchUpdateDocumentRequest.new(requests: requests)
+    )
+
+    output_json({
+      status: 'success',
+      operation: 'insert_image',
+      document_id: document_id,
+      inserted_at: index,
+      image_url: image_url,
+      revision_id: result.document_id
+    })
+  rescue Google::Apis::Error => e
+    output_json({
+      status: 'error',
+      error_code: 'API_ERROR',
+      operation: 'insert_image',
+      message: "Google Docs API error: #{e.message}"
+    })
+    exit EXIT_API_ERROR
+  rescue StandardError => e
+    output_json({
+      status: 'error',
+      error_code: 'INSERT_IMAGE_FAILED',
+      operation: 'insert_image',
+      message: "Failed to insert image: #{e.message}"
+    })
+    exit EXIT_OPERATION_FAILED
+  end
+
   # Create new document
   def create_document(title:, content: nil)
     document = Google::Apis::DocsV1::Document.new(title: title)
@@ -839,12 +897,32 @@ if __FILE__ == $PROGRAM_NAME
       end_index: input[:end_index]
     )
 
+  when 'insert-image'
+    input = JSON.parse(STDIN.read, symbolize_names: true)
+
+    unless input[:document_id] && input[:image_url]
+      puts JSON.pretty_generate({
+        status: 'error',
+        error_code: 'MISSING_REQUIRED_FIELDS',
+        message: 'Required fields: document_id, image_url'
+      })
+      exit DocsManager::EXIT_INVALID_ARGS
+    end
+
+    manager.insert_image(
+      document_id: input[:document_id],
+      image_url: input[:image_url],
+      index: input[:index],
+      width: input[:width],
+      height: input[:height]
+    )
+
   else
     puts JSON.pretty_generate({
       status: 'error',
       error_code: 'INVALID_COMMAND',
       message: "Unknown command: #{command}",
-      valid_commands: ['auth', 'read', 'structure', 'insert', 'append', 'replace', 'format', 'page-break', 'create', 'delete']
+      valid_commands: ['auth', 'read', 'structure', 'insert', 'append', 'replace', 'format', 'page-break', 'create', 'delete', 'insert-image']
     })
     usage
     exit DocsManager::EXIT_INVALID_ARGS
