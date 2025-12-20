@@ -1,3 +1,6 @@
 [submodule "skills/excalidraw-diagrams"]
 	path = skills/excalidraw-diagrams
 	url = https://github.com/robtaylor/excalidraw-diagrams.git
+[submodule "skills/google-docs"]
+	path = skills/google-docs
+	url = https://github.com/robtaylor/google-docs-skill.git
