@@ -565,7 +565,246 @@ class DocsManager
     exit EXIT_OPERATION_FAILED
   end
 
+  # Create document from markdown with proper formatting
+  def create_from_markdown(title:, markdown:)
+    # Create document first
+    document = Google::Apis::DocsV1::Document.new(title: title)
+    result = @docs_service.create_document(document)
+    document_id = result.document_id
+
+    # Parse markdown and build formatted content
+    parsed = parse_markdown(markdown)
+
+    # Insert plain text first
+    plain_text = parsed[:text]
+    unless plain_text.empty?
+      insert_requests = [
+        {
+          insert_text: {
+            location: { index: 1 },
+            text: plain_text
+          }
+        }
+      ]
+      @docs_service.batch_update_document(
+        document_id,
+        Google::Apis::DocsV1::BatchUpdateDocumentRequest.new(requests: insert_requests)
+      )
+    end
+
+    # Apply formatting (must be done in reverse order to preserve indices)
+    format_requests = parsed[:formats].reverse.map do |fmt|
+      build_format_request(fmt)
+    end.compact
+
+    unless format_requests.empty?
+      @docs_service.batch_update_document(
+        document_id,
+        Google::Apis::DocsV1::BatchUpdateDocumentRequest.new(requests: format_requests)
+      )
+    end
+
+    output_json({
+      status: 'success',
+      operation: 'create_from_markdown',
+      document_id: document_id,
+      title: title,
+      revision_id: result.revision_id
+    })
+  rescue Google::Apis::Error => e
+    output_json({
+      status: 'error',
+      error_code: 'API_ERROR',
+      operation: 'create_from_markdown',
+      message: "Google Docs API error: #{e.message}"
+    })
+    exit EXIT_API_ERROR
+  rescue StandardError => e
+    output_json({
+      status: 'error',
+      error_code: 'CREATE_FAILED',
+      operation: 'create_from_markdown',
+      message: "Failed to create document: #{e.message}"
+    })
+    exit EXIT_OPERATION_FAILED
+  end
+
   private
+
+  # Parse markdown and return plain text with formatting info
+  def parse_markdown(markdown)
+    text = ''
+    formats = []
+    current_index = 1  # Google Docs starts at index 1
+
+    lines = markdown.lines
+    i = 0
+    while i < lines.length
+      line = lines[i].rstrip
+
+      if line.start_with?('# ')
+        # H1 heading
+        heading_text = line[2..] + "\n"
+        formats << { type: :heading1, start: current_index, end: current_index + heading_text.length - 1 }
+        text += heading_text
+        current_index += heading_text.length
+      elsif line.start_with?('## ')
+        # H2 heading
+        heading_text = line[3..] + "\n"
+        formats << { type: :heading2, start: current_index, end: current_index + heading_text.length - 1 }
+        text += heading_text
+        current_index += heading_text.length
+      elsif line.start_with?('### ')
+        # H3 heading
+        heading_text = line[4..] + "\n"
+        formats << { type: :heading3, start: current_index, end: current_index + heading_text.length - 1 }
+        text += heading_text
+        current_index += heading_text.length
+      elsif line.start_with?('- ') || line.start_with?('* ')
+        # Bullet list item
+        item_text = '• ' + line[2..] + "\n"
+        text += item_text
+        current_index += item_text.length
+      elsif line.match?(/^\d+\. /)
+        # Numbered list item - keep as-is
+        text += line + "\n"
+        current_index += line.length + 1
+      elsif line == '---'
+        # Horizontal rule - use em dash line
+        rule_text = "———————————————————————————\n"
+        text += rule_text
+        current_index += rule_text.length
+      elsif line.empty?
+        # Empty line
+        text += "\n"
+        current_index += 1
+      else
+        # Regular paragraph - handle inline formatting
+        processed = process_inline_formatting(line, current_index, formats)
+        para_text = processed[:text] + "\n"
+        text += para_text
+        current_index += para_text.length
+      end
+
+      i += 1
+    end
+
+    { text: text, formats: formats }
+  end
+
+  # Process inline markdown formatting (**bold**, *italic*, `code`)
+  def process_inline_formatting(line, base_index, formats)
+    result_text = ''
+    pos = 0
+    current_offset = 0
+
+    while pos < line.length
+      if line[pos, 2] == '**'
+        # Bold - find closing **
+        end_pos = line.index('**', pos + 2)
+        if end_pos
+          bold_text = line[pos + 2...end_pos]
+          start_idx = base_index + result_text.length
+          result_text += bold_text
+          formats << { type: :bold, start: start_idx, end: start_idx + bold_text.length }
+          pos = end_pos + 2
+        else
+          result_text += line[pos]
+          pos += 1
+        end
+      elsif line[pos] == '*' && line[pos, 2] != '**'
+        # Italic - find closing *
+        end_pos = line.index('*', pos + 1)
+        if end_pos && line[end_pos, 2] != '**'
+          italic_text = line[pos + 1...end_pos]
+          start_idx = base_index + result_text.length
+          result_text += italic_text
+          formats << { type: :italic, start: start_idx, end: start_idx + italic_text.length }
+          pos = end_pos + 1
+        else
+          result_text += line[pos]
+          pos += 1
+        end
+      elsif line[pos] == '`'
+        # Code - find closing `
+        end_pos = line.index('`', pos + 1)
+        if end_pos
+          code_text = line[pos + 1...end_pos]
+          start_idx = base_index + result_text.length
+          result_text += code_text
+          formats << { type: :code, start: start_idx, end: start_idx + code_text.length }
+          pos = end_pos + 1
+        else
+          result_text += line[pos]
+          pos += 1
+        end
+      else
+        result_text += line[pos]
+        pos += 1
+      end
+    end
+
+    { text: result_text }
+  end
+
+  # Build a Google Docs format request from parsed format info
+  def build_format_request(fmt)
+    case fmt[:type]
+    when :heading1
+      {
+        update_paragraph_style: {
+          range: { start_index: fmt[:start], end_index: fmt[:end] },
+          paragraph_style: { named_style_type: 'HEADING_1' },
+          fields: 'namedStyleType'
+        }
+      }
+    when :heading2
+      {
+        update_paragraph_style: {
+          range: { start_index: fmt[:start], end_index: fmt[:end] },
+          paragraph_style: { named_style_type: 'HEADING_2' },
+          fields: 'namedStyleType'
+        }
+      }
+    when :heading3
+      {
+        update_paragraph_style: {
+          range: { start_index: fmt[:start], end_index: fmt[:end] },
+          paragraph_style: { named_style_type: 'HEADING_3' },
+          fields: 'namedStyleType'
+        }
+      }
+    when :bold
+      {
+        update_text_style: {
+          range: { start_index: fmt[:start], end_index: fmt[:end] },
+          text_style: { bold: true },
+          fields: 'bold'
+        }
+      }
+    when :italic
+      {
+        update_text_style: {
+          range: { start_index: fmt[:start], end_index: fmt[:end] },
+          text_style: { italic: true },
+          fields: 'italic'
+        }
+      }
+    when :code
+      {
+        update_text_style: {
+          range: { start_index: fmt[:start], end_index: fmt[:end] },
+          text_style: {
+            font_family: 'Courier New',
+            background_color: {
+              color: { rgb_color: { red: 0.95, green: 0.95, blue: 0.95 } }
+            }
+          },
+          fields: 'fontFamily,backgroundColor'
+        }
+      }
+    end
+  end
 
   # Extract text content from document body
   def extract_text_content(content_elements)
@@ -879,6 +1118,23 @@ if __FILE__ == $PROGRAM_NAME
       content: input[:content]
     )
 
+  when 'create-from-markdown'
+    input = JSON.parse(STDIN.read, symbolize_names: true)
+
+    unless input[:title] && input[:markdown]
+      puts JSON.pretty_generate({
+        status: 'error',
+        error_code: 'MISSING_REQUIRED_FIELDS',
+        message: 'Required fields: title, markdown'
+      })
+      exit DocsManager::EXIT_INVALID_ARGS
+    end
+
+    manager.create_from_markdown(
+      title: input[:title],
+      markdown: input[:markdown]
+    )
+
   when 'delete'
     input = JSON.parse(STDIN.read, symbolize_names: true)
 
@@ -922,7 +1178,7 @@ if __FILE__ == $PROGRAM_NAME
       status: 'error',
       error_code: 'INVALID_COMMAND',
       message: "Unknown command: #{command}",
-      valid_commands: ['auth', 'read', 'structure', 'insert', 'append', 'replace', 'format', 'page-break', 'create', 'delete', 'insert-image']
+      valid_commands: ['auth', 'read', 'structure', 'insert', 'append', 'replace', 'format', 'page-break', 'create', 'create-from-markdown', 'delete', 'insert-image']
     })
     usage
     exit DocsManager::EXIT_INVALID_ARGS
