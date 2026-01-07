@@ -55,16 +55,18 @@
 
 **IF YOU ARE CLAUDE CODE (which you are), use this EXACT format:**
 ```
-Co-developed-by: Claude Code $version ($models_used)
+Co-developed-by: Claude Code v$version ($models_used)
 ```
 Where:
-- `$version` is the Claude Code version (check with `/version` if needed)
-- `$models_used` is the model(s) used in the session (check with `/stats` if needed)
+- `$version` is the Claude Code version - **run `~/.claude/local/claude --version` to get it**
+- `$models_used` is the model(s) used in the session (check with `/stats` if needed, or use the known model from this session)
 
 Example for Claude Code:
 ```
-Co-developed-by: Claude Code v0.2.1 (claude-sonnet-4-5-20250929)
+Co-developed-by: Claude Code v2.0.76 (claude-sonnet-4-5-20250929)
 ```
+
+**IMPORTANT**: Always run `~/.claude/local/claude --version` before creating commits to get the current version.
 
 **For reference only** (other AI tools, NOT for Claude Code):
 - GitHub Copilot: `Co-developed-by: GitHub-Copilot GPT-4 v1.0.0`
