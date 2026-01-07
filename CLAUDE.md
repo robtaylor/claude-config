@@ -29,6 +29,8 @@
 - **Error handling**: Custom error types with descriptive messages
 - **No trailing whitespace** in any files
 - **No whitespace on blank lines** in any files
+- **File size**: Keep source files under ~20,000 tokens (~70KB). If a file grows larger, split it into logical modules. Estimate tokens as `file_size_bytes / 3.5`
+- **Always** attempt to add assertions for your assumptions
 
 ## Python Dependencies
 - Use `uv` for dependency and python environment management. If a project has a pyproject.toml, you can determine which environment manager to use by looking for 'pdm', 'poetry' or 'uv' specific keys. if there are no manager specific keys, default to `uv`
@@ -42,6 +44,56 @@
 
 ## Git
 - *Always* rebase rather than merge
+
+### AI Agent Attribution in Commits - MANDATORY
+
+**CRITICAL**: When creating commits as an AI assistant, you MUST identify yourself properly. This is NOT optional.
+
+#### REQUIRED: Co-developed-by Tag
+
+**YOU MUST include a "Co-developed-by" tag in EVERY commit message you create.**
+
+**IF YOU ARE CLAUDE CODE (which you are), use this EXACT format:**
+```
+Co-developed-by: Claude Code $version ($models_used)
+```
+Where:
+- `$version` is the Claude Code version (check with `/version` if needed)
+- `$models_used` is the model(s) used in the session (check with `/stats` if needed)
+
+Example for Claude Code:
+```
+Co-developed-by: Claude Code v0.2.1 (claude-sonnet-4-5-20250929)
+```
+
+**For reference only** (other AI tools, NOT for Claude Code):
+- GitHub Copilot: `Co-developed-by: GitHub-Copilot GPT-4 v1.0.0`
+- Cursor: `Co-developed-by: Cursor gpt-4-turbo-2024-04-09`
+- Generic Claude API usage: `Co-developed-by: Claude claude-sonnet-4-5-20250929`
+
+**DO NOT include email addresses in the Co-developed-by tag.**
+
+#### PROHIBITED: What You MUST NOT Do
+
+1. **NEVER add a "Signed-off-by" tag for yourself**
+   - The Signed-off-by tag represents a LEGAL CERTIFICATION by a human developer
+   - Only the human user should add their Signed-off-by tag
+   - AI assistants cannot make legal certifications
+
+2. **NEVER include advertising or promotional text**
+   - Do NOT add: "🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+   - Do NOT add: Similar promotional or marketing messages
+   - Keep commit messages professional and focused on the technical changes
+
+#### Why This Matters
+
+Transparency about AI involvement in development:
+- Helps maintainers and reviewers understand the development process
+- Provides proper attribution for AI-assisted code
+- Maintains trust and accountability in open source contributions
+- Separates AI contribution from human legal certification
+
+**Remember: The Co-developed-by tag is MANDATORY. The Signed-off-by tag is FORBIDDEN for AI assistants.**
 
 ### Refactoring PR Commit History
 When cleaning up a PR before final review, use this approach:
@@ -87,7 +139,7 @@ When cleaning up a PR before final review, use this approach:
 ## further Python guidelines
 - Prefer pathlib over using os.path
 - If there is a 'lint', 'test' or similar command configured in pyproject.toml, use this before finishing or committing
-- When writing tests for a library, use public apis unless instructed otherwise. command line interfaces count as public api.
+- When writing tests for a library, use public apis unless instructed otherwise. command line interfaces count as public api.- Use python `logging` rather than prints for debug/trace messages
 
 ## PDM usage
 - when starting work, check if there is a pyproject.toml. If it contains 'pdm' anywhere, assume you should use PDM for running scripts and interacting with the python environment.
