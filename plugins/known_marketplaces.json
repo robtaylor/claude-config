@@ -5,7 +5,7 @@
       "url": "https://github.com/anthropics/claude-code.git"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/claude-code-plugins",
-    "lastUpdated": "2025-12-16T01:26:22.273Z"
+    "lastUpdated": "2026-01-07T10:03:17.630Z"
   },
   "claude-code-workflows": {
     "source": {
@@ -13,7 +13,7 @@
       "url": "https://github.com/wshobson/agents.git"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/claude-code-workflows",
-    "lastUpdated": "2025-12-12T12:47:32.592Z"
+    "lastUpdated": "2025-12-30T00:43:28.477Z"
   },
   "mhattingpete-claude-skills": {
     "source": {
@@ -21,7 +21,7 @@
       "url": "https://github.com/mhattingpete/claude-skills-marketplace.git"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/mhattingpete-claude-skills",
-    "lastUpdated": "2025-12-12T13:51:10.613Z"
+    "lastUpdated": "2025-12-30T00:43:30.992Z"
   },
   "claude-plugins-official": {
     "source": {
@@ -29,6 +29,15 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2025-12-19T01:06:01.281Z"
+    "lastUpdated": "2026-01-07T09:54:10.837Z"
+  },
+  "chipflow-context-tools": {
+    "source": {
+      "source": "github",
+      "repo": "chipflow/claude-context-tools"
+    },
+    "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/chipflow-context-tools",
+    "lastUpdated": "2026-01-07T10:01:33.717Z",
+    "autoUpdate": true
   }
 }

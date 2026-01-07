@@ -44,6 +44,61 @@
         "gitCommitSha": "80ac0f58a6b258e1b5d86945eae0fb474c452918",
         "isLocal": true
       }
+    ],
+    "pyright-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/claude-plugins-official/pyright-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2025-12-20T05:46:28.580Z",
+        "lastUpdated": "2025-12-20T05:46:28.580Z",
+        "gitCommitSha": "84d91a429248aaab5e4c47948d625e11521fcf23",
+        "isLocal": true
+      }
+    ],
+    "clangd-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/claude-plugins-official/clangd-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2025-12-20T19:06:29.122Z",
+        "lastUpdated": "2025-12-20T19:06:29.122Z",
+        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78",
+        "isLocal": true
+      }
+    ],
+    "rust-analyzer-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/claude-plugins-official/rust-analyzer-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2025-12-22T09:23:17.649Z",
+        "lastUpdated": "2025-12-22T09:23:17.649Z",
+        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78",
+        "isLocal": true
+      }
+    ],
+    "swift-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/claude-plugins-official/swift-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2025-12-27T04:28:51.120Z",
+        "lastUpdated": "2025-12-27T04:28:51.120Z",
+        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78",
+        "isLocal": true
+      }
+    ],
+    "context-tools@chipflow-context-tools": [
+      {
+        "scope": "user",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/chipflow-context-tools/context-tools/0.6.0",
+        "version": "0.6.0",
+        "installedAt": "2025-12-28T20:29:28.773Z",
+        "lastUpdated": "2026-01-06T21:08:08.128Z",
+        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78",
+        "isLocal": true
+      }
     ]
   }
 }

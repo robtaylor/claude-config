@@ -1,0 +1,33 @@
+# Credentials and secrets
+.google/
+*.db
+
+# Conversation and shell history (could contain sensitive project data)
+history.jsonl
+shell-snapshots/
+
+# Telemetry and analytics
+telemetry/
+statsig/
+stats-cache.json
+
+# Runtime and cache files
+plugins/cache/
+plugins/install-counts-cache.json
+plugins/marketplaces/
+file-history/
+
+# Project-specific and debug data
+projects/
+debug/
+local/
+
+# Plans and todos (could contain sensitive project information)
+plans/
+todos/
+
+# Backups
+*.backup.*
+
+# Large config file (verify before committing)
+claude.json

@@ -4,10 +4,16 @@
     "pr-review-toolkit@claude-code-plugins": true,
     "code-refactoring@claude-code-workflows": true,
     "context-management@claude-code-workflows": true,
-    "visual-documentation-skills@mhattingpete-claude-skills": true
+    "visual-documentation-skills@mhattingpete-claude-skills": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "clangd-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true,
+    "context-tools@chipflow-context-tools": false
   },
   "alwaysThinkingEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1757592786790
-  }
+  },
+  "model": "sonnet"
 }
