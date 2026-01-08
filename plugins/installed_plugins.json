@@ -84,10 +84,10 @@
     "context-tools@chipflow-context-tools": [
       {
         "scope": "user",
-        "installPath": "/Users/roberttaylor/.claude/plugins/cache/chipflow-context-tools/context-tools/0.8.4",
-        "version": "0.8.4",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/chipflow-context-tools/context-tools/0.8.5",
+        "version": "0.8.5",
         "installedAt": "2025-12-28T20:29:28.773Z",
-        "lastUpdated": "2026-01-08T18:31:50.004Z",
+        "lastUpdated": "2026-01-08T20:10:43.573Z",
         "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78"
       }
     ]
