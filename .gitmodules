@@ -4,3 +4,6 @@
 [submodule "skills/google-docs"]
 	path = skills/google-docs
 	url = https://github.com/robtaylor/google-docs-skill.git
+[submodule "skills/design-doc-mermaid"]
+	path = skills/design-doc-mermaid
+	url = https://github.com/SpillwaveSolutions/design-doc-mermaid.git

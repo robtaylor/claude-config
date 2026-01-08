@@ -1,4 +1,5 @@
 {
+  "model": "sonnet",
   "hooks": {},
   "enabledPlugins": {
     "pr-review-toolkit@claude-code-plugins": true,
@@ -9,11 +10,10 @@
     "clangd-lsp@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true,
-    "context-tools@chipflow-context-tools": false
+    "context-tools@chipflow-context-tools": true
   },
   "alwaysThinkingEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1757592786790
-  },
-  "model": "sonnet"
+  }
 }

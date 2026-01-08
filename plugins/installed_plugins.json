@@ -8,8 +8,7 @@
         "version": "1.0.0",
         "installedAt": "2025-12-03T17:42:17.678Z",
         "lastUpdated": "2025-12-03T17:42:17.678Z",
-        "gitCommitSha": "4928f2cdcac40e7e684f5102e3818513e70eb8a1",
-        "isLocal": true
+        "gitCommitSha": "4928f2cdcac40e7e684f5102e3818513e70eb8a1"
       }
     ],
     "code-refactoring@claude-code-workflows": [
@@ -19,8 +18,7 @@
         "version": "ddbd034ca35c",
         "installedAt": "2025-12-03T17:42:17.678Z",
         "lastUpdated": "2025-12-03T17:42:17.678Z",
-        "gitCommitSha": "ddbd034ca35c6e76af6e54891d83a646e7837b1c",
-        "isLocal": true
+        "gitCommitSha": "ddbd034ca35c6e76af6e54891d83a646e7837b1c"
       }
     ],
     "context-management@claude-code-workflows": [
@@ -30,8 +28,7 @@
         "version": "ddbd034ca35c",
         "installedAt": "2025-12-03T17:42:17.678Z",
         "lastUpdated": "2025-12-03T17:42:17.678Z",
-        "gitCommitSha": "ddbd034ca35c6e76af6e54891d83a646e7837b1c",
-        "isLocal": true
+        "gitCommitSha": "ddbd034ca35c6e76af6e54891d83a646e7837b1c"
       }
     ],
     "visual-documentation-skills@mhattingpete-claude-skills": [
@@ -41,8 +38,7 @@
         "version": "1.1.0",
         "installedAt": "2025-12-03T17:42:17.678Z",
         "lastUpdated": "2025-12-03T17:42:17.678Z",
-        "gitCommitSha": "80ac0f58a6b258e1b5d86945eae0fb474c452918",
-        "isLocal": true
+        "gitCommitSha": "80ac0f58a6b258e1b5d86945eae0fb474c452918"
       }
     ],
     "pyright-lsp@claude-plugins-official": [
@@ -52,8 +48,7 @@
         "version": "1.0.0",
         "installedAt": "2025-12-20T05:46:28.580Z",
         "lastUpdated": "2025-12-20T05:46:28.580Z",
-        "gitCommitSha": "84d91a429248aaab5e4c47948d625e11521fcf23",
-        "isLocal": true
+        "gitCommitSha": "84d91a429248aaab5e4c47948d625e11521fcf23"
       }
     ],
     "clangd-lsp@claude-plugins-official": [
@@ -63,8 +58,7 @@
         "version": "1.0.0",
         "installedAt": "2025-12-20T19:06:29.122Z",
         "lastUpdated": "2025-12-20T19:06:29.122Z",
-        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78",
-        "isLocal": true
+        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78"
       }
     ],
     "rust-analyzer-lsp@claude-plugins-official": [
@@ -74,8 +68,7 @@
         "version": "1.0.0",
         "installedAt": "2025-12-22T09:23:17.649Z",
         "lastUpdated": "2025-12-22T09:23:17.649Z",
-        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78",
-        "isLocal": true
+        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78"
       }
     ],
     "swift-lsp@claude-plugins-official": [
@@ -85,19 +78,17 @@
         "version": "1.0.0",
         "installedAt": "2025-12-27T04:28:51.120Z",
         "lastUpdated": "2025-12-27T04:28:51.120Z",
-        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78",
-        "isLocal": true
+        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78"
       }
     ],
     "context-tools@chipflow-context-tools": [
       {
         "scope": "user",
-        "installPath": "/Users/roberttaylor/.claude/plugins/cache/chipflow-context-tools/context-tools/0.6.0",
-        "version": "0.6.0",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/chipflow-context-tools/context-tools/0.8.4",
+        "version": "0.8.4",
         "installedAt": "2025-12-28T20:29:28.773Z",
-        "lastUpdated": "2026-01-06T21:08:08.128Z",
-        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78",
-        "isLocal": true
+        "lastUpdated": "2026-01-08T18:31:50.004Z",
+        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78"
       }
     ]
   }

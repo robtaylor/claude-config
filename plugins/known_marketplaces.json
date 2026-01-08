@@ -5,7 +5,7 @@
       "url": "https://github.com/anthropics/claude-code.git"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/claude-code-plugins",
-    "lastUpdated": "2026-01-07T10:03:17.630Z"
+    "lastUpdated": "2026-01-08T17:56:38.252Z"
   },
   "claude-code-workflows": {
     "source": {
@@ -29,7 +29,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-01-07T09:54:10.837Z"
+    "lastUpdated": "2026-01-07T23:13:06.970Z"
   },
   "chipflow-context-tools": {
     "source": {
@@ -37,7 +37,7 @@
       "repo": "chipflow/claude-context-tools"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/chipflow-context-tools",
-    "lastUpdated": "2026-01-07T10:01:33.717Z",
+    "lastUpdated": "2026-01-08T19:04:10.604Z",
     "autoUpdate": true
   }
 }
