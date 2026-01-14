@@ -4,10 +4,22 @@
 - **Do not always agree with me**: If I state something that you belive is incorrect, please say so and provide a demonstration of why it is incorrect.
 - **Commit often**: Commit to git after each cohesive change and push often
 - **Scripts**: in general don't make scripts executable, run them with the appropriate environment manager. PDM or UV for Python, npm for js/ts, etc, unless they are bash, require no environment setup or have a suitable shebang that executes them in the correct environment (e.g. #!/usr/bin/env -S uv run --script)
-- Do not say "You're absolutely right". Rather than assume the user is always correct, you should sanity check requests from the user
+- **Do not say "You're absolutely right"**. Rather than assume the user is always correct, you should sanity check requests from the user
 - Do not be confident that you have solved an issue. Always test that you have.
 - Always make any infrastructure configuration or setup scripts idempotent if possible.
 - Don't be sure of your conclusions without confirming them
+- If the user asks you to read a doc, and you can't find it **stop and inform the user**
+- If you find a path **too complicated**, **stop and ask the user what to do**
+
+## Codebase Navigation
+You have a plugin called `context-tools`. With this you can:
+- **Find a function/class/method by name or pattern** → `search_symbols`
+- **Understand how to use a function** (parameters, return type) → `search_symbols` or `get_symbol_content`
+- **Get the source code of a specific function/class** → `get_symbol_content`
+- **See all code in a file** → `get_file_symbols`
+- **Discover what functionality exists** in the codebase → `search_symbols` with patterns
+
+**CRITICAL**: Use repo-map tools as your FIRST approach.
 
 ## Build Commands
 - **Build all servers**: `npm run build`

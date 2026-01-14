@@ -84,11 +84,21 @@
     "context-tools@chipflow-context-tools": [
       {
         "scope": "user",
-        "installPath": "/Users/roberttaylor/.claude/plugins/cache/chipflow-context-tools/context-tools/0.8.5",
-        "version": "0.8.5",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/chipflow-context-tools/context-tools/0.9.2",
+        "version": "0.9.2",
         "installedAt": "2025-12-28T20:29:28.773Z",
-        "lastUpdated": "2026-01-08T20:10:43.573Z",
+        "lastUpdated": "2026-01-14T01:39:21.595Z",
         "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78"
+      }
+    ],
+    "document-skills@anthropic-agent-skills": [
+      {
+        "scope": "user",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/anthropic-agent-skills/document-skills/unknown",
+        "version": "unknown",
+        "installedAt": "2026-01-11T21:59:13.189Z",
+        "lastUpdated": "2026-01-11T21:59:13.189Z",
+        "gitCommitSha": "897400762fe4791b73831a5b33857ffaae2c20b8"
       }
     ]
   }

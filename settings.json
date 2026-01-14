@@ -1,16 +1,16 @@
 {
-  "model": "sonnet",
   "hooks": {},
   "enabledPlugins": {
-    "pr-review-toolkit@claude-code-plugins": true,
+    "pr-review-toolkit@claude-code-plugins": false,
     "code-refactoring@claude-code-workflows": true,
-    "context-management@claude-code-workflows": true,
+    "context-management@claude-code-workflows": false,
     "visual-documentation-skills@mhattingpete-claude-skills": true,
-    "pyright-lsp@claude-plugins-official": true,
-    "clangd-lsp@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true,
-    "swift-lsp@claude-plugins-official": true,
-    "context-tools@chipflow-context-tools": true
+    "pyright-lsp@claude-plugins-official": false,
+    "clangd-lsp@claude-plugins-official": false,
+    "rust-analyzer-lsp@claude-plugins-official": false,
+    "swift-lsp@claude-plugins-official": false,
+    "context-tools@chipflow-context-tools": true,
+    "document-skills@anthropic-agent-skills": true
   },
   "alwaysThinkingEnabled": true,
   "feedbackSurveyState": {
