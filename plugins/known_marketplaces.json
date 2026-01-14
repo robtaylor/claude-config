@@ -29,7 +29,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-01-14T01:54:36.874Z"
+    "lastUpdated": "2026-01-14T14:29:26.358Z"
   },
   "chipflow-context-tools": {
     "source": {
@@ -37,7 +37,7 @@
       "repo": "chipflow/claude-context-tools"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/chipflow-context-tools",
-    "lastUpdated": "2026-01-14T10:17:53.788Z",
+    "lastUpdated": "2026-01-14T14:32:01.861Z",
     "autoUpdate": true
   },
   "anthropic-agent-skills": {
