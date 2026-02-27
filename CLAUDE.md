@@ -10,7 +10,7 @@
 - Don't be sure of your conclusions without confirming them
 - If the user asks you to read a doc, and you can't find it **stop and inform the user**
 - If you find a path **too complicated**, **stop and ask the user what to do**
-- When running a build, tee the output to a file (prefer this to using `head` or `tail`)
+- When running a build, tee the output to a file and pipe into head or tail as appropriate (prefer this to using `head` or `tail` only)
 
 ## Codebase Navigation
 You have a plugin called `context-tools`. With this you can:
