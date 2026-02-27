@@ -772,7 +772,6 @@
       "Bash(for * in *; do *; done*)",
       "Bash(while *; do *; done*)",
       "Bash(if *; then *; fi*)",
-      "Bash(case * in *) *;; esac*)",
       
       "Bash(* &)",
       "Bash(nohup * &)",
@@ -901,7 +900,6 @@
       "WebFetch(domain:n8n.io)",
       "WebFetch(domain:api.openai.com)",
       "WebFetch(domain:api.anthropic.com)",
-      "WebSearch(**)",
       
       "Bash(aws *)",
       "Bash(aws s3 *)",
@@ -976,7 +974,7 @@
       "Bash(heroku domains*)",
       "Bash(heroku releases*)",
       
-      "TodoRead()",
+      "TodoRead(**)",
       "TodoWrite(**)",
       
       "Task(**)",
@@ -995,9 +993,6 @@
       "Bash(mkfs*)",
       "Bash(fdisk*)",
       "Bash(parted*)",
-      
-      "Bash(:(){ :|:& };:*)",
-      "Bash(*fork*bomb*)",
       
       "Bash(> /dev/sda*)",
       "Bash(> /dev/nvme*)",
