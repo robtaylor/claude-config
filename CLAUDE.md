@@ -11,6 +11,7 @@
 - If the user asks you to read a doc, and you can't find it **stop and inform the user**
 - If you find a path **too complicated**, **stop and ask the user what to do**
 - When running a build, tee the output to a file and pipe into head or tail as appropriate (prefer this to using `head` or `tail` only)
+- for temp files, use `/tmp/claude/`
 
 ## Codebase Navigation
 You have a plugin called `context-tools`. With this you can:
@@ -110,7 +111,7 @@ Use these commands:
 Co-developed-by: Claude Code v$version ($models_used)
 ```
 Where:
-- `$version` is the Claude Code version - **run `~/.local/bin/claude --version` to get it**
+- `$version` is the Claude Code version - **"Currently Running, from /doctor to get it**
 - `$models_used` is the model(s) used in the session (check with `/stats` if needed, or use the known model from this session)
 
 Example for Claude Code:
