@@ -9,10 +9,12 @@
     "clangd-lsp@claude-plugins-official": false,
     "rust-analyzer-lsp@claude-plugins-official": false,
     "swift-lsp@claude-plugins-official": false,
-    "context-tools@chipflow-context-tools": true,
-    "document-skills@anthropic-agent-skills": true
+    "document-skills@anthropic-agent-skills": true,
+    "context-daddy@chipflow-context-daddy": true
   },
   "alwaysThinkingEnabled": true,
+  "autoUpdatesChannel": "stable",
+  "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1757592786790
   }

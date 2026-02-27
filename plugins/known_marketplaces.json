@@ -5,7 +5,7 @@
       "url": "https://github.com/anthropics/claude-code.git"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/claude-code-plugins",
-    "lastUpdated": "2026-01-14T12:22:47.139Z"
+    "lastUpdated": "2026-02-27T13:21:22.514Z"
   },
   "claude-code-workflows": {
     "source": {
@@ -13,7 +13,7 @@
       "url": "https://github.com/wshobson/agents.git"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/claude-code-workflows",
-    "lastUpdated": "2026-01-14T01:53:48.603Z"
+    "lastUpdated": "2026-02-24T02:10:44.508Z"
   },
   "mhattingpete-claude-skills": {
     "source": {
@@ -21,7 +21,7 @@
       "url": "https://github.com/mhattingpete/claude-skills-marketplace.git"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/mhattingpete-claude-skills",
-    "lastUpdated": "2026-01-14T01:53:49.394Z"
+    "lastUpdated": "2026-02-24T02:10:45.318Z"
   },
   "claude-plugins-official": {
     "source": {
@@ -29,16 +29,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-01-14T14:29:26.358Z"
-  },
-  "chipflow-context-tools": {
-    "source": {
-      "source": "github",
-      "repo": "chipflow/claude-context-tools"
-    },
-    "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/chipflow-context-tools",
-    "lastUpdated": "2026-01-14T14:32:01.861Z",
-    "autoUpdate": true
+    "lastUpdated": "2026-02-27T12:49:59.494Z"
   },
   "anthropic-agent-skills": {
     "source": {
@@ -46,6 +37,14 @@
       "repo": "anthropics/skills"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/anthropic-agent-skills",
-    "lastUpdated": "2026-01-14T01:53:53.351Z"
+    "lastUpdated": "2026-02-24T02:10:49.244Z"
+  },
+  "chipflow-context-daddy": {
+    "source": {
+      "source": "github",
+      "repo": "chipflow/context-daddy"
+    },
+    "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/chipflow-context-daddy",
+    "lastUpdated": "2026-02-24T02:10:50.458Z"
   }
 }

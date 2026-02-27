@@ -81,16 +81,6 @@
         "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78"
       }
     ],
-    "context-tools@chipflow-context-tools": [
-      {
-        "scope": "user",
-        "installPath": "/Users/roberttaylor/.claude/plugins/cache/chipflow-context-tools/context-tools/0.9.2",
-        "version": "0.9.2",
-        "installedAt": "2025-12-28T20:29:28.773Z",
-        "lastUpdated": "2026-01-14T01:39:21.595Z",
-        "gitCommitSha": "dd0f34cc65ca56bc474862091a2dbdbe73705d78"
-      }
-    ],
     "document-skills@anthropic-agent-skills": [
       {
         "scope": "user",
@@ -99,6 +89,16 @@
         "installedAt": "2026-01-11T21:59:13.189Z",
         "lastUpdated": "2026-01-11T21:59:13.189Z",
         "gitCommitSha": "897400762fe4791b73831a5b33857ffaae2c20b8"
+      }
+    ],
+    "context-daddy@chipflow-context-daddy": [
+      {
+        "scope": "user",
+        "installPath": "/Users/roberttaylor/.claude/plugins/cache/chipflow-context-daddy/context-daddy/0.13.8",
+        "version": "0.13.8",
+        "installedAt": "2026-02-23T02:26:30.501Z",
+        "lastUpdated": "2026-02-24T02:10:57.379Z",
+        "gitCommitSha": "9a6204b299d539b03a1785bef6ec928ae08e8fdd"
       }
     ]
   }

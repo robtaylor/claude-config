@@ -10,6 +10,7 @@
 - Don't be sure of your conclusions without confirming them
 - If the user asks you to read a doc, and you can't find it **stop and inform the user**
 - If you find a path **too complicated**, **stop and ask the user what to do**
+- When running a build, tee the output to a file (prefer this to using `head` or `tail`)
 
 ## Codebase Navigation
 You have a plugin called `context-tools`. With this you can:
@@ -19,18 +20,7 @@ You have a plugin called `context-tools`. With this you can:
 - **See all code in a file** → `get_file_symbols`
 - **Discover what functionality exists** in the codebase → `search_symbols` with patterns
 
-**CRITICAL**: Use repo-map tools as your FIRST approach.
-
-## Build Commands
-- **Build all servers**: `npm run build`
-- **Watch all servers**: `npm run watch`
-- **Build single server**: `cd src/server-name && npm run build`
-- **Start a server**: `cd src/server-name && npm run start`
-
-## Test Commands
-- **TypeScript**: No global test configuration
-- **Python tests**: `pytest`
-- **Run single test**: `pytest tests/test_file.py::test_function_name`
+**CRITICAL**: Use context-daddy tools as your FIRST approach.
 
 ## Code Style Guidelines
 - **TypeScript**: ES2022, Node16 modules, strict mode
@@ -44,18 +34,68 @@ You have a plugin called `context-tools`. With this you can:
 - **File size**: Keep source files under ~20,000 tokens (~70KB). If a file grows larger, split it into logical modules. Estimate tokens as `file_size_bytes / 3.5`
 - **Always** attempt to add assertions for your assumptions
 
-## Python Dependencies
-- Use `uv` for dependency and python environment management. If a project has a pyproject.toml, you can determine which environment manager to use by looking for 'pdm', 'poetry' or 'uv' specific keys. if there are no manager specific keys, default to `uv`
+# Python
+## Python guidelines
+- Prefer pathlib over using os.path
+- If there is a 'lint', 'test' or similar command configured in pyproject.toml, use this before finishing or committing
+- When writing tests for a library, use public apis unless instructed otherwise. command line interfaces count as public api.- Use python `logging` rather than prints for debug/trace messages
+
+##  Dependencies
+- **Use `uv` for dependency and python environment management by default**. If a project has a pyproject.toml, you can determine which environment manager to use by looking for 'pdm', 'poetry' or 'uv' specific keys. if there are no manager specific keys, default to `uv`
 - For projects that still use requirements.txt, use `uv` for installing an enviroment for that project.
 - Some may use PDM - use `pdm install` to set up
 - Run scripts with the package manager - e.g `uv run`, `pdm run`, `poetry run`
+
+- **Use uv exclusively for Python package management by default.
+
+## Package Management Commands
+- Prefer a [uv workspace](https://docs.astral.sh/uv/concepts/projects/workspaces/) by default.
+- Always populate with pyproject.toml, or using [uv script dependencies](https://docs.astral.sh/uv/guides/scripts/#running-a-script-with-dependencies)
+- All Python dependencies **must be installed, synchronized, and locked** using uv
+- Never use pip, pip-tools, poetry, or conda directly for dependency management
+- If you need uv workspace dependencies without the project compoenents, you can use --no-install-workspace
+
+Use these commands:
+
+- Install dependencies: `uv add <package>`
+- Remove dependencies: `uv remove <package>`
+- Sync dependencies: `uv sync`
+
+## Running Python Code
+
+- Run a Python script with `uv run <script-name>.py`
+- Run Python tools like Pytest with `uv run pytest` or `uv run ruff`
+- Launch a Python repl with `uv run python`
+
+## Managing Scripts with PEP 723 Inline Metadata
+
+- Run a Python script with inline metadata (dependencies defined at the top of the file) with: `uv run script.py`
+- You can add or remove dependencies manually from the `dependencies =` section at the top of the script, or
+- Or using uv CLI:
+    - `uv add package-name --script script.py`
+    - `uv remove package-name --script script.py`
+
+## Workspace members with compiled code (Rust, C, C++, etc..)
+- You can build and get the logs of workspace member builds with uv sync -vvv
+
+## uv with docker
+- When building containers with docker for a uv based project, follow https://docs.astral.sh/uv/guides/integration/docker/
+- If you need a specific python version, use uv to install, beung sure to mount the cache
+
+
+## PDM usage
+- when starting work, check if there is a pyproject.toml. If it contains 'pdm' anywhere, assume you should use PDM for running scripts and interacting with the python environment.
+- Run python directly by using 'pdm run python ...' to use the correct environment
+- Run tests by running 'pdm test ..' of if that fails 'pdm run pytest .."
+
 
 ## Project Organization
 - Servers organized in `src/` directory
 - Each server has its own package.json/pyproject.toml and Dockerfile
 
 ## Git
-- *Always* rebase rather than merge
+- *Always* rebase rather than merge branches. 
+- If CI isn't running for a PR, check if the branch has conflicts against the base of the PR, if it does, rebase
 
 ### AI Agent Attribution in Commits - MANDATORY
 
@@ -70,7 +110,7 @@ You have a plugin called `context-tools`. With this you can:
 Co-developed-by: Claude Code v$version ($models_used)
 ```
 Where:
-- `$version` is the Claude Code version - **run `~/.claude/local/claude --version` to get it**
+- `$version` is the Claude Code version - **run `~/.local/bin/claude --version` to get it**
 - `$models_used` is the model(s) used in the session (check with `/stats` if needed, or use the known model from this session)
 
 Example for Claude Code:
@@ -150,17 +190,10 @@ When cleaning up a PR before final review, use this approach:
 - you can use `gh run rerun` rather than empty commits to re run a workflow
 - Alway use rebase when merging a PR
 
-## further Python guidelines
-- Prefer pathlib over using os.path
-- If there is a 'lint', 'test' or similar command configured in pyproject.toml, use this before finishing or committing
-- When writing tests for a library, use public apis unless instructed otherwise. command line interfaces count as public api.- Use python `logging` rather than prints for debug/trace messages
-
-## PDM usage
-- when starting work, check if there is a pyproject.toml. If it contains 'pdm' anywhere, assume you should use PDM for running scripts and interacting with the python environment.
-- Run python directly by using 'pdm run python ...' to use the correct environment
-- Run tests by running 'pdm test ..' of if that fails 'pdm run pytest .."
-
 # C/C++ projects
+## Speed
+- For large builds, prefer to use ccache or sccache and setup ccache for CI, caching the ccache cache.
+
 ## Debugging Build Issues
 
 ### CI Build Failures
@@ -203,38 +236,8 @@ When cleaning up a PR before final review, use this approach:
 3. **Cross-platform testing**: Verify fixes work on Linux, macOS, and Windows
 4. **Use proper CMake patterns**: Prefer target-based configurations over global settings
 
-# Python Package Management with uv
-
-Use uv exclusively for Python package management in this project.
-
-## Package Management Commands
-
-- All Python dependencies **must be installed, synchronized, and locked** using uv
-- Never use pip, pip-tools, poetry, or conda directly for dependency management
-
-Use these commands:
-
-- Install dependencies: `uv add <package>`
-- Remove dependencies: `uv remove <package>`
-- Sync dependencies: `uv sync`
-
-## Running Python Code
-
-- Run a Python script with `uv run <script-name>.py`
-- Run Python tools like Pytest with `uv run pytest` or `uv run ruff`
-- Launch a Python repl with `uv run python`
-
-## Managing Scripts with PEP 723 Inline Metadata
-
-- Run a Python script with inline metadata (dependencies defined at the top of the file) with: `uv run script.py`
-- You can add or remove dependencies manually from the `dependencies =` section at the top of the script, or
-- Or using uv CLI:
-    - `uv add package-name --script script.py`
-    - `uv remove package-name --script script.py`
-
-## uv with docker
-- When building containers with docker for a uv based project, follow https://docs.astral.sh/uv/guides/integration/docker/
-- If you need a specific python version, use uv to install, beung sure to mount the cache
+# Metal GPU Profiling (macOS / Apple Silicon)
+If you need to profile GPU execution see `~/.claude/GPU_PROFILING.md` for instructions.
 
 # Docker & Container Patterns
 When using Docker, it's essential to follow best practices for containerization and orchestration. Here are some key points to consider:
