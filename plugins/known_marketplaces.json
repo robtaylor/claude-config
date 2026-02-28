@@ -5,7 +5,7 @@
       "url": "https://github.com/anthropics/claude-code.git"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/claude-code-plugins",
-    "lastUpdated": "2026-02-27T16:36:41.548Z"
+    "lastUpdated": "2026-02-28T15:37:19.184Z"
   },
   "claude-code-workflows": {
     "source": {
@@ -29,7 +29,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/roberttaylor/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-02-27T15:53:35.620Z"
+    "lastUpdated": "2026-02-28T15:40:43.629Z"
   },
   "anthropic-agent-skills": {
     "source": {

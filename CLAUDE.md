@@ -1,5 +1,12 @@
 # ChipFlow Servers Guidelines
 
+## Plan Mode
+When entering plan mode and the plan file already has content from a previous plan:
+1. Read the existing plan content first
+2. Copy the existing plan to a backup file in the same directory with a timestamp suffix (e.g., `plan-name.backup-20260228-1430.md`)
+3. In the new plan, include a "Previous Plan (incomplete)" section summarizing any unfinished items from the old plan
+4. Incorporate relevant incomplete steps into the new plan where appropriate
+
 # General behaviour
 - **Do not always agree with me**: If I state something that you belive is incorrect, please say so and provide a demonstration of why it is incorrect.
 - **Commit often**: Commit to git after each cohesive change and push often
@@ -194,6 +201,50 @@ When cleaning up a PR before final review, use this approach:
 # C/C++ projects
 ## Speed
 - For large builds, prefer to use ccache or sccache and setup ccache for CI, caching the ccache cache.
+
+## Debugging amd64/Linux Binaries on macOS (Apple Silicon)
+
+When running x86_64 Linux binaries in Docker on Apple Silicon (via Rosetta):
+
+### GDB does NOT work under Rosetta
+- `gdb` inside `--platform linux/amd64` containers **cannot access x86 registers** through Rosetta emulation
+- Even with `--security-opt seccomp=unconfined --cap-add=SYS_PTRACE`, GDB fails with `Couldn't get registers: Input/output error`
+- This is a fundamental Rosetta limitation - it emulates x86 instructions but doesn't expose x86 register state to ptrace
+
+### Use LD_PRELOAD signal handler instead
+For catching SEGFAULTs, build a small shared library with a signal handler that calls `backtrace()`:
+
+```c
+// seghandler.c
+#include <signal.h>
+#include <execinfo.h>
+#include <stdio.h>
+#include <unistd.h>
+void segfault_handler(int sig) {
+    void *array[50];
+    size_t size = backtrace(array, 50);
+    fprintf(stderr, "\n*** SEGFAULT (signal %d) ***\n", sig);
+    backtrace_symbols_fd(array, size, STDERR_FILENO);
+    _exit(139);
+}
+__attribute__((constructor))
+void install_handler(void) { signal(SIGSEGV, segfault_handler); }
+```
+
+Compile: `gcc -shared -fPIC -O0 -g -o libseghandler.so seghandler.c`
+
+Run: `LD_PRELOAD=/path/to/libseghandler.so ./program`
+
+### Build flags for useful backtraces
+- Use `-O0 -g -rdynamic` in CFLAGS for debug builds
+- `-rdynamic` exports all symbols so `backtrace_symbols` can resolve function names
+- Use `addr2line -e binary -f -C <addr>` inside the container to resolve addresses to source file:line
+
+### Full workflow
+1. Build with `-O0 -g -rdynamic` and include `gdb` + `binutils` in Docker image
+2. Run with `LD_PRELOAD=libseghandler.so` to catch crash and get backtrace addresses
+3. Use `addr2line` inside the same container to resolve addresses to source locations
+4. Fix the bug and rebuild
 
 ## Debugging Build Issues
 
