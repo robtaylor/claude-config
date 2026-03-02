@@ -14,16 +14,6 @@
             "timeout": 5
           }
         ]
-      },
-      {
-        "matcher": "Read|Edit|Write|Glob|Grep|LS|NotebookRead|NotebookEdit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/tool-permissions-inherit.sh",
-            "timeout": 5
-          }
-        ]
       }
     ],
     "PostToolUse": [
@@ -301,6 +291,7 @@
       "Bash(gsutil:*)",
       "Bash(vercel:*)",
       "Bash(nvidia-smi:*)",
+      "Bash(nix:*)",
       "mcp__plugin_context-daddy_repo-map__*",
       "mcp__plugin_context-daddy_goals__*"
     ],
