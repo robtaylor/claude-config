@@ -14,6 +14,16 @@
             "timeout": 5
           }
         ]
+      },
+      {
+        "matcher": "Read|Edit|Write|Glob|Grep|LS|NotebookRead|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/tool-permissions-inherit.sh",
+            "timeout": 5
+          }
+        ]
       }
     ],
     "PostToolUse": [
@@ -50,10 +60,10 @@
   "permissions": {
     "allow": [
       "Read(/**)",
-      "Edit(/Users/roberttaylor/**)",
-      "Edit(/tmp/claude/**)",
-      "Write(/Users/roberttaylor/**)",
-      "Write(/tmp/claude/**)",
+      "Edit(/**)",
+      "Edit(//tmp/claude/**)",
+      "Write(/**)",
+      "Write(//tmp/claude/**)",
       "Glob(**)",
       "Grep(**)",
       "LS(**)",
@@ -263,7 +273,7 @@
       "Bash(direnv:*)",
       "Bash(jq:*)",
       "Bash(yq:*)",
-      "Bash(echo $*)",
+      "Bash(echo:*)",
       "Bash(printf:*)",
       "Bash(test:*)",
       "Bash(seq:*)",
@@ -354,7 +364,6 @@
       "Bash(rm /var/log/*)",
       "Bash(rm -rf /var/log/*)",
       "Bash(> /var/log/*)",
-      "Bash(echo > /var/log/*)",
       "Bash(truncate -s 0 /var/log/*)",
       "Bash(npm install -g * --unsafe-perm*)",
       "Bash(pip install * --break-system-packages*)",
